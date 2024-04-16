@@ -1,0 +1,4 @@
+requests==3.0.4
+flask
+transformers
+torch
