@@ -1,4 +1,4 @@
-requests==3.0.4
+requests
 flask
 transformers
 torch

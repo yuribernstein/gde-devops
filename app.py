@@ -24,7 +24,7 @@ def get_weather():
     report['suggestion'] = answer
     return jsonify(report)
 
-app.run(debug=True, port="8080")
+app.run(debug=True, host="0.0.0.0", port="8080")
 
     
     
