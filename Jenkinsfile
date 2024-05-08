@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                echo "Hello ${env.PAYLOAD}"
+                echo "Hello ${env.PARAM}"
                 git branch:'main', url:env.GIT_URL
             }
         }
