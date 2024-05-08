@@ -9,5 +9,5 @@ To rin containerized:
 
 application will listen on port 8080, you can access it on `http://localhost:8080`
 
-asdasd
+asda
 repo for GDE DevOps Course 03/2024
