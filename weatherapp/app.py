@@ -1,9 +1,25 @@
 from flask import Flask, make_response, jsonify, request
 from weather import getWeather
-from model import tierOneModel
+import requests
+import config as cfg
+config = cfg.get_config()
 
 app = Flask(__name__)
 
+def get_suggestion(context):
+    url = config['suggestion_app']  
+    headers = {
+        'Content-Type': 'application/json'
+    }
+    data = {
+        "context": context
+    }
+    response = requests.post(url, headers=headers, json=data)
+    return response.json()['answer']  
+    
+@app.route('/health', methods=['GET'])
+def healthcheck():
+    return make_response(jsonify({'status': 'healthy'}), 200)
 
 @app.route('/', methods=['GET'])
 def main():
@@ -18,8 +34,8 @@ def get_weather():
     zip = request.args.get('zip')
     weather = getWeather(zip)
     context = weather.verbal_weather()
-    model = tierOneModel()
-    answer = model.get_answer("What should I wear today?", context)
+    # answer = get_suggestion(context)
+    answer = 'no model yet available'
     report = weather.weather_report()
     report['suggestion'] = answer
     return jsonify(report)

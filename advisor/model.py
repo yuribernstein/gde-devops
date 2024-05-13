@@ -1,7 +1,6 @@
 from typing import Any
 from transformers import T5ForConditionalGeneration, T5Tokenizer
 import torch
-from weather import getWeather
 
 
 class tierOneModel():
@@ -11,7 +10,8 @@ class tierOneModel():
 
     def get_answer(self, user_input, context = None, max_length = 128):
 
-        input_text = f"Q: {user_input}\n context: {context}\n A:"
+        input_text = f"{context}, {user_input}"
+        print(input_text)
         input_ids = self.tokenizer(input_text, return_tensors="pt").input_ids
 
         with torch.no_grad():
