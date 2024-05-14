@@ -73,6 +73,7 @@ pipeline {
         }
         always {
             sh 'sudo docker rm -f weatherappci'
+            sh 'sudo docker rm -f weatherapp-testci'
             echo 'This will always run after the stages, regardless of the result.'
         }
     }
