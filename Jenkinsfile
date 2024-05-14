@@ -23,7 +23,7 @@ pipeline {
 
         stage('Cleanup') {
             steps {
-                sh 'sudo docker rm -f | sudo docker ps -aq'
+                sh 'sudo docker rm -f $(sudo docker ps -aq)'
             }
         }
 
@@ -78,8 +78,7 @@ pipeline {
             echo 'Error - Build failed.'
         }
         always {
-            sh 'sudo docker rm -f weatherappci'
-            sh 'sudo docker rm -f weatherapp-testci'
+            sh 'sudo docker rm -f $(sudo docker ps -aq)'
             echo 'This will always run after the stages, regardless of the result.'
         }
     }
