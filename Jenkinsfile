@@ -35,7 +35,7 @@ pipeline {
                     }
                     sh """
                     sed -i 's/API_KEY/ab8c1bb9c6msh394ad24011cb45ap14b2fbjsn87dd84cb040e/g' configuration.json
-                    sudo docker build -t weatherapp:${fullCommitId} .
+                    sudo docker build -t weatherapp:${fullCommitId} . 1> /dev/null
                     sudo docker run --name weatherappci -p 8080:8080 -d weatherapp:${fullCommitId}
                     """
                 }
@@ -52,7 +52,7 @@ pipeline {
             steps {
                 dir('tests') {
                     sh """
-                    sudo docker build -t weatherapp-test:${fullCommitId} .
+                    sudo docker build -t weatherapp-test:${fullCommitId} . 1> /dev/null
                     sudo docker run --name weatherapp-testci --link weatherappci weatherapp-test:${fullCommitId} python3 testapp.py --zip 80905 --location 'Colorado Springs' --app_address 'http://weatherappci:8080'
                     """
                 }
