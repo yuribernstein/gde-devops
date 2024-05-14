@@ -21,6 +21,12 @@ pipeline {
             }
         }
 
+        stage('Cleanup') {
+            steps {
+                sh 'sudo docker rm -f | sudo docker ps -aq'
+            }
+        }
+
         stage('Build') {
             steps {
                 dir('weatherapp') {
