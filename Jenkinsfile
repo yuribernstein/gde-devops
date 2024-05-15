@@ -6,9 +6,9 @@ pipeline {
         label 'docker'
     }
 
-    environment {
-        DOCKER_CREDENTIALS_ID = 'docker'
-    }
+    // environment {
+    //     DOCKER_CREDENTIALS_ID = 'docker'
+    // }
     
     stages {
         stage('Clone Repository') {
@@ -20,7 +20,6 @@ pipeline {
                 }
             }
         }
-
 
         stage('Build') {
             steps {
@@ -49,6 +48,7 @@ pipeline {
                     sh """
                     sudo docker build -t weatherapp-test:${fullCommitId} . 1> /dev/null
                     sudo docker run --name weatherapp-testci --link weatherappci weatherapp-test:${fullCommitId} python3 testapp.py --zip 80905 --location 'Colorado Springs' --app_address 'http://weatherappci:8080'
+                    sudo docker logs weatherapp-testci | grep pass
                     """
                 }
             }
@@ -60,7 +60,7 @@ pipeline {
         success {
             echo 'Success - Build completed.'
             script {
-                withCredentials([usernamePassword(credentialsId: env.DOCKER_CREDENTIALS_ID, usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+                withCredentials([usernamePassword(credentialsId: 'docker', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
                     sh """
                     echo ${DOCKER_PASS} | sudo docker login -u ${DOCKER_USER} --password-stdin
                     sudo docker tag weatherapp:${fullCommitId} yuribernstein/advisor:${fullCommitId}
@@ -78,3 +78,10 @@ pipeline {
         }
     }
 }
+
+
+//command 1> /dev/null stdout
+
+//command 2> /dev/null stderr
+
+//command &> /dev/null  stdout and stderr
