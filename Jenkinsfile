@@ -28,7 +28,7 @@ pipeline {
                         echo "Commit ID is ${commitId}"
                     }
                     sh """
-                    sed -i 's/API_KEY/ab8c1bb9c6msh394ad24011cb45ap14b2fbjsn87dd84cb040e/g' configuration.json
+                    sed -i 's/API_KEY//g' configuration.json
                     sudo docker build -t weatherapp:${fullCommitId} . 1> /dev/null
                     sudo docker run --name weatherappci -p 8080:8080 -d weatherapp:${fullCommitId}
                     """
