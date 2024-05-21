@@ -8,3 +8,7 @@ aws ec2 run-instances \
     --count 1 \
     --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=created with aws cli}]' \
 --output json > instance-details.json
+
+
+# aws ec2 describe-instances
+# aws ec2 describe-instances --instance-ids <id>
