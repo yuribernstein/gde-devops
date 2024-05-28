@@ -16,7 +16,7 @@ provider "aws" {
 resource "aws_instance" "instance_1" {
   ami             = "ami-09040d770ffe2224f"
   instance_type   = "t2.micro"
-  security_groups = ["sg-0083ecc4d412ff5b3"] # Replace with your security group ID
+  security_groups = ["sg-0083ecc4d412ff5b3"]
 
   # User data script to install Docker and run a container
   user_data = <<-EOF
@@ -31,7 +31,7 @@ resource "aws_instance" "instance_1" {
 resource "aws_instance" "instance_2" {
   ami             = "ami-09040d770ffe2224f"
   instance_type   = "t2.micro"
-  security_groups = ["sg-0083ecc4d412ff5b3"] # Replace with your security group ID
+  security_groups = ["sg-0083ecc4d412ff5b3"]
 
   # User data script to install Docker and run a container
   user_data = <<-EOF
