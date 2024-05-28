@@ -1,0 +1,16 @@
+---
+- name: pull image
+  docker_image:
+    name: {{ docker_image_name }}
+    source: pull
+    state: present
+
+- name: run container
+  docker_container:
+    name: advisor
+    image: yuribernstein/advisor:ddfde4b23c48bf6915e01daa19b44a9dd5299d70
+    state: started
+    ports:
+      - "8080:8080"
+    restart_policy: always
+    detach: yes
