@@ -292,3 +292,724 @@
 [Time: 2024-04-30 16:23:08,107, File: connectionpool.py:244, Function: _new_conn] DEBUG - Starting new HTTP connection (1): localhost:8081
 [Time: 2024-04-30 16:23:09,280, File: connectionpool.py:549, Function: _make_request] DEBUG - http://localhost:8081 "POST / HTTP/1.1" 200 27
 [Time: 2024-04-30 16:23:09,281, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [30/Apr/2024 16:23:09] "GET /get_weather?zip=78681 HTTP/1.1" 200 -
+[Time: 2024-06-18 00:26:35,082, File: _internal.py:96, Function: _log] INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.0.105:8080
+[Time: 2024-06-18 00:26:35,082, File: _internal.py:96, Function: _log] INFO - [33mPress CTRL+C to quit[0m
+[Time: 2024-06-18 00:26:35,083, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 00:26:35,212, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 00:26:35,220, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 00:26:39,628, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 00:26:39] "GET / HTTP/1.1" 200 -
+[Time: 2024-06-18 00:26:39,670, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 00:26:39] "GET /style.css HTTP/1.1" 200 -
+[Time: 2024-06-18 00:26:39,680, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 00:26:39] "GET /script.js HTTP/1.1" 200 -
+[Time: 2024-06-18 00:26:39,680, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 00:26:39] "GET /weather.png HTTP/1.1" 200 -
+[Time: 2024-06-18 00:26:39,858, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 00:26:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 00:26:39,862, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 00:26:39] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 00:26:44,169, File: weather.py:18, Function: get_weather] DEBUG - Getting weather for 80905
+[Time: 2024-06-18 00:26:44,243, File: connectionpool.py:1055, Function: _new_conn] DEBUG - Starting new HTTPS connection (1): us-weather-by-zip-code.p.rapidapi.com:443
+[Time: 2024-06-18 00:26:46,604, File: connectionpool.py:549, Function: _make_request] DEBUG - https://us-weather-by-zip-code.p.rapidapi.com:443 "GET /getweatherzipcode?zip=80905 HTTP/1.1" 200 352
+[Time: 2024-06-18 00:26:46,607, File: weather.py:14, Function: __init__] INFO - Weather for 80905 retrieved
+[Time: 2024-06-18 00:26:46,607, File: weather.py:40, Function: verbal_weather] DEBUG - Verbose message requested for 80905
+[Time: 2024-06-18 00:26:46,607, File: weather.py:41, Function: verbal_weather] DEBUG - Weather is Fair and a temperature is 51.0 degrees Fahrenheit
+[Time: 2024-06-18 00:26:46,608, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 00:26:46] "GET /get_weather?zip=80905 HTTP/1.1" 200 -
+[Time: 2024-06-18 01:06:12,653, File: _internal.py:96, Function: _log] INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.0.105:8080
+[Time: 2024-06-18 01:06:12,653, File: _internal.py:96, Function: _log] INFO - [33mPress CTRL+C to quit[0m
+[Time: 2024-06-18 01:06:12,654, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:06:12,800, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:06:12,806, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:06:16,434, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:06:16] "[36mGET / HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:06:16,466, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:06:16] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:06:16,468, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:06:16] "[36mGET /script.js HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:06:16,469, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:06:16] "[36mGET /weather.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:06:16,658, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:06:16] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:06:18,616, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:06:18] "GET /users HTTP/1.1" 200 -
+[Time: 2024-06-18 01:06:18,820, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:06:18] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:06:29,015, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:06:29,046, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:06:29,213, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:06:29,217, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:06:39,318, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:06:39,341, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:06:39,521, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:06:39,529, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:06:42,566, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:06:42,603, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:06:42,737, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:06:42,740, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:06:43,758, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:06:43,795, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:06:43,927, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:06:43,931, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:07:25,454, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:07:25,500, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:11:20,767, File: _internal.py:96, Function: _log] INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.0.105:8080
+[Time: 2024-06-18 01:11:20,768, File: _internal.py:96, Function: _log] INFO - [33mPress CTRL+C to quit[0m
+[Time: 2024-06-18 01:11:20,768, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:11:20,917, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:11:20,922, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:11:24,859, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:11:24] "[36mGET / HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:11:24,878, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:11:24] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:11:24,882, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:11:24] "[36mGET /script.js HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:11:24,884, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:11:24] "[36mGET /weather.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:11:24,951, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:11:24] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:11:28,211, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:11:28] "[35m[1mGET /register HTTP/1.1[0m" 500 -
+[Time: 2024-06-18 01:11:28,224, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:11:28] "GET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[Time: 2024-06-18 01:11:28,228, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:11:28] "GET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[Time: 2024-06-18 01:11:28,257, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:11:28] "GET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[Time: 2024-06-18 01:11:28,301, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:11:28] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:11:28,302, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:11:28] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:12:52,934, File: _internal.py:96, Function: _log] INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.0.105:8080
+[Time: 2024-06-18 01:12:52,934, File: _internal.py:96, Function: _log] INFO - [33mPress CTRL+C to quit[0m
+[Time: 2024-06-18 01:12:52,934, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:12:53,053, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:12:53,058, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:12:55,533, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:12:55] "GET /register HTTP/1.1" 200 -
+[Time: 2024-06-18 01:12:55,617, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:12:55] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:13:07,929, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:13:07] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[Time: 2024-06-18 01:13:07,951, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:13:07] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:13:07,956, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:13:07] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:13:07,967, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:13:07] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:13:08,021, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:13:08] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:13:08,024, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:13:08] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:13:51,797, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:13:51,871, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:13:52,093, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:13:52,098, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:14:10,858, File: _internal.py:96, Function: _log] INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.0.105:8080
+[Time: 2024-06-18 01:14:10,858, File: _internal.py:96, Function: _log] INFO - [33mPress CTRL+C to quit[0m
+[Time: 2024-06-18 01:14:10,858, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:14:10,979, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:14:10,984, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:14:13,912, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:14:13] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[Time: 2024-06-18 01:14:13,939, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:14:13] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:14:13,942, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:14:13] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:14:13,955, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:14:13] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:14:14,002, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:14:14] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:14:14,006, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:14:14] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:14:15,812, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:14:15] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:14:21,182, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:14:21] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[Time: 2024-06-18 01:14:21,211, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:14:21] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:14:21,214, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:14:21] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:14:21,229, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:14:21] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:14:21,276, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:14:21] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:14:21,277, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:14:21] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:14:27,707, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:14:27] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:14:43,131, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:14:43] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[Time: 2024-06-18 01:14:43,144, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:14:43] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:14:43,145, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:14:43] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:14:43,163, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:14:43] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:14:43,208, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:14:43] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:14:43,208, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:14:43] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:15:09,728, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:15:09,755, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:15:09,943, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:15:09,947, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:15:21,079, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:15:21,129, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:15:21,267, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:15:21,272, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:15:39,070, File: _internal.py:96, Function: _log] INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.0.105:8080
+[Time: 2024-06-18 01:15:39,071, File: _internal.py:96, Function: _log] INFO - [33mPress CTRL+C to quit[0m
+[Time: 2024-06-18 01:15:39,072, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:15:39,220, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:15:39,224, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:15:40,966, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:15:40] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:15:44,888, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:15:44] "[32mPOST /register HTTP/1.1[0m" 302 -
+[Time: 2024-06-18 01:15:44,898, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:15:44] "GET /login HTTP/1.1" 200 -
+[Time: 2024-06-18 01:15:44,964, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:15:44] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:16:13,706, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:16:13,729, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:16:13,912, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:16:13,917, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:16:16,950, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:16:16,975, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:17:07,023, File: _internal.py:96, Function: _log] INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.0.105:8080
+[Time: 2024-06-18 01:17:07,024, File: _internal.py:96, Function: _log] INFO - [33mPress CTRL+C to quit[0m
+[Time: 2024-06-18 01:17:07,025, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:17:07,142, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:17:07,150, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:17:10,555, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:17:10] "GET /register HTTP/1.1" 200 -
+[Time: 2024-06-18 01:17:10,629, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:17:10] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:17:16,487, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:17:16] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:17:28,151, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:17:28] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[Time: 2024-06-18 01:17:28,166, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:17:28] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:17:28,168, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:17:28] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:17:28,183, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:17:28] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:17:28,223, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:17:28] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:17:28,225, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:17:28] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:17:30,218, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:17:30] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:17:45,620, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:17:45,650, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:17:45,863, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:17:45,873, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:17:47,890, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:17:47,965, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:17:48,151, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:17:48,155, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:17:59,260, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:17:59,294, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:17:59,458, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:17:59,461, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:18:11,984, File: _internal.py:96, Function: _log] INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.0.105:8080
+[Time: 2024-06-18 01:18:11,984, File: _internal.py:96, Function: _log] INFO - [33mPress CTRL+C to quit[0m
+[Time: 2024-06-18 01:18:11,985, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:18:12,115, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:18:12,120, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:18:17,914, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:18:17] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[Time: 2024-06-18 01:18:17,950, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:18:17] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:18:17,952, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:18:17] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:18:17,975, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:18:17] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:18:18,018, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:18:18] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:18:18,024, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:18:18] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:18:37,412, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:18:37,450, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:18:37,652, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:18:37,657, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:18:50,691, File: _internal.py:96, Function: _log] INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.0.105:8080
+[Time: 2024-06-18 01:18:50,691, File: _internal.py:96, Function: _log] INFO - [33mPress CTRL+C to quit[0m
+[Time: 2024-06-18 01:18:50,691, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:18:50,808, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:18:50,812, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:18:52,916, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:18:52] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:18:55,926, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:18:55] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[Time: 2024-06-18 01:18:55,957, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:18:55] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:18:55,960, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:18:55] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:18:55,969, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:18:55] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:18:56,009, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:18:56] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:18:56,010, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:18:56] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:19:02,652, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:19:02] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:19:09,463, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:19:09] "[32mPOST /register HTTP/1.1[0m" 302 -
+[Time: 2024-06-18 01:19:09,471, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:19:09] "GET /login HTTP/1.1" 200 -
+[Time: 2024-06-18 01:19:09,533, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:19:09] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:20:42,050, File: _internal.py:96, Function: _log] INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.0.105:8080
+[Time: 2024-06-18 01:20:42,051, File: _internal.py:96, Function: _log] INFO - [33mPress CTRL+C to quit[0m
+[Time: 2024-06-18 01:20:42,052, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:20:42,200, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:20:42,204, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:20:44,353, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:20:44] "GET /register HTTP/1.1" 200 -
+[Time: 2024-06-18 01:20:44,420, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:20:44] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:20:45,057, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:20:45] "GET /register HTTP/1.1" 200 -
+[Time: 2024-06-18 01:20:45,119, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:20:45] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:20:48,181, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:20:48] "GET /register HTTP/1.1" 200 -
+[Time: 2024-06-18 01:20:48,415, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:20:48] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:20:57,559, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:20:57] "GET /register HTTP/1.1" 200 -
+[Time: 2024-06-18 01:20:57,723, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:20:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:20:57,725, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:20:57] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:21:00,080, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:21:00] "GET / HTTP/1.1" 200 -
+[Time: 2024-06-18 01:21:00,093, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:21:00] "GET /style.css HTTP/1.1" 200 -
+[Time: 2024-06-18 01:21:00,104, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:21:00] "GET /script.js HTTP/1.1" 200 -
+[Time: 2024-06-18 01:21:00,104, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:21:00] "GET /weather.png HTTP/1.1" 200 -
+[Time: 2024-06-18 01:21:00,163, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:21:00] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:21:32,603, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:21:32] "[33mGET /registration HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:21:32,677, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:21:32] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:21:39,415, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:21:39] "GET /register HTTP/1.1" 200 -
+[Time: 2024-06-18 01:21:39,484, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:21:39] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:21:42,099, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:21:42] "GET /register HTTP/1.1" 200 -
+[Time: 2024-06-18 01:21:42,327, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:21:42] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:21:48,323, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:21:48] "GET /register HTTP/1.1" 200 -
+[Time: 2024-06-18 01:22:25,528, File: _internal.py:96, Function: _log] INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.0.105:8080
+[Time: 2024-06-18 01:22:25,528, File: _internal.py:96, Function: _log] INFO - [33mPress CTRL+C to quit[0m
+[Time: 2024-06-18 01:22:25,529, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:22:25,667, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:22:25,672, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:22:27,015, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:22:27] "GET /register HTTP/1.1" 200 -
+[Time: 2024-06-18 01:22:27,068, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:22:27] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:22:27,293, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:22:27] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:22:29,468, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:22:29] "GET /register HTTP/1.1" 200 -
+[Time: 2024-06-18 01:22:29,486, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:22:29] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:22:29,652, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:22:29] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:22:34,784, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:22:34] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:22:35,634, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:22:35] "[33mGET /registration HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:22:35,694, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:22:35] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:22:38,205, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:22:38] "[36mGET / HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:22:38,228, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:22:38] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:22:38,231, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:22:38] "[36mGET /script.js HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:22:38,233, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:22:38] "[36mGET /weather.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:22:38,275, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:22:38] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:22:39,169, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:22:39] "[36mGET / HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:22:39,183, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:22:39] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:22:39,184, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:22:39] "[36mGET /script.js HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:22:39,185, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:22:39] "[36mGET /weather.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:22:39,238, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:22:39] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:22:43,074, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:22:43] "GET /login HTTP/1.1" 200 -
+[Time: 2024-06-18 01:22:43,128, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:22:43] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:23:05,466, File: _internal.py:96, Function: _log] INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.0.105:8080
+[Time: 2024-06-18 01:23:05,467, File: _internal.py:96, Function: _log] INFO - [33mPress CTRL+C to quit[0m
+[Time: 2024-06-18 01:23:05,468, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:23:05,618, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:23:05,623, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:23:08,166, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:23:08] "GET /login HTTP/1.1" 200 -
+[Time: 2024-06-18 01:23:08,405, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:23:08] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:23:11,471, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:23:11] "GET /login HTTP/1.1" 200 -
+[Time: 2024-06-18 01:23:11,699, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:23:11] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:23:27,855, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:23:27,913, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:23:28,089, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:23:28,099, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:23:38,146, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:23:38] "GET /login HTTP/1.1" 200 -
+[Time: 2024-06-18 01:23:38,389, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:23:38] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:23:39,012, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:23:39] "GET /login HTTP/1.1" 200 -
+[Time: 2024-06-18 01:23:39,243, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:23:39] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:23:39,251, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:23:39] "GET /login HTTP/1.1" 200 -
+[Time: 2024-06-18 01:23:39,460, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:23:39] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:23:41,344, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:23:41] "GET /login HTTP/1.1" 200 -
+[Time: 2024-06-18 01:23:41,570, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:23:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:23:41,572, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:23:41] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:23:59,655, File: _internal.py:96, Function: _log] INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.0.105:8080
+[Time: 2024-06-18 01:23:59,655, File: _internal.py:96, Function: _log] INFO - [33mPress CTRL+C to quit[0m
+[Time: 2024-06-18 01:23:59,655, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:23:59,769, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:23:59,774, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:24:00,927, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:24:00] "GET /login HTTP/1.1" 200 -
+[Time: 2024-06-18 01:24:01,128, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:24:01] "GET /style.css HTTP/1.1" 200 -
+[Time: 2024-06-18 01:24:01,254, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:24:01] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:24:13,061, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:24:13] "POST /login HTTP/1.1" 200 -
+[Time: 2024-06-18 01:24:13,237, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:24:13] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:24:15,706, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:24:15] "GET /login HTTP/1.1" 200 -
+[Time: 2024-06-18 01:24:15,769, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:24:15] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:24:18,894, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:24:18] "[32mPOST /login HTTP/1.1[0m" 302 -
+[Time: 2024-06-18 01:24:18,899, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:24:18] "GET / HTTP/1.1" 200 -
+[Time: 2024-06-18 01:24:18,921, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:24:18] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:24:18,924, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:24:18] "GET /script.js HTTP/1.1" 200 -
+[Time: 2024-06-18 01:24:18,925, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:24:18] "GET /weather.png HTTP/1.1" 200 -
+[Time: 2024-06-18 01:24:18,971, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:24:18] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:26:27,565, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:26:27,600, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:26:27,812, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:26:27,817, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:26:34,881, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:26:34,916, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:26:35,059, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:26:35,063, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:26:48,210, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:26:48,246, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:26:48,419, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:26:48,424, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:26:50,442, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:26:50,483, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:26:50,640, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:26:50,646, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:26:56,708, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:26:56,732, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:26:56,859, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:26:56,863, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:27:25,228, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:27:25,266, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:27:25,479, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:27:25,485, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:28:07,988, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:28:08,025, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:28:12,928, File: _internal.py:96, Function: _log] INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.0.105:8080
+[Time: 2024-06-18 01:28:12,928, File: _internal.py:96, Function: _log] INFO - [33mPress CTRL+C to quit[0m
+[Time: 2024-06-18 01:28:12,929, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:28:13,076, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:28:13,082, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:28:16,306, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:16] "[36mGET / HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:16,319, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:16] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:16,322, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:16] "[36mGET /script.js HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:16,322, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:16] "[36mGET /weather.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:16,383, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:16] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:28:18,823, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:18] "[36mGET / HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:18,835, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:18] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:18,836, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:18] "[36mGET /weather.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:18,836, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:18] "[36mGET /script.js HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:18,889, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:18] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:28:19,366, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:19] "[36mGET / HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:19,381, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:19] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:19,381, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:19] "[36mGET /script.js HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:19,383, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:19] "[36mGET /weather.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:19,436, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:19] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:28:19,577, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:19] "[36mGET / HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:19,589, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:19] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:19,590, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:19] "[36mGET /script.js HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:19,591, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:19] "[36mGET /weather.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:19,638, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:19] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:28:19,811, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:19] "[36mGET / HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:19,828, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:19] "[36mGET /weather.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:19,830, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:19] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:19,831, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:19] "[36mGET /script.js HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:19,875, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:19] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:28:20,024, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:20] "[36mGET / HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:20,036, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:20] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:20,039, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:20] "[36mGET /script.js HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:20,040, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:20] "[36mGET /weather.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:20,079, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:20] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:28:22,022, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:22] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:23,349, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:23] "GET / HTTP/1.1" 200 -
+[Time: 2024-06-18 01:28:23,361, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:23] "GET /style.css HTTP/1.1" 200 -
+[Time: 2024-06-18 01:28:23,366, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:23] "GET /script.js HTTP/1.1" 200 -
+[Time: 2024-06-18 01:28:23,367, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:23] "GET /weather.png HTTP/1.1" 200 -
+[Time: 2024-06-18 01:28:23,590, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:28:23,593, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:23] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:28:29,265, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:28:29,296, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:28:29,498, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:28:29,504, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:28:31,033, File: _internal.py:96, Function: _log] INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.0.105:8080
+[Time: 2024-06-18 01:28:31,033, File: _internal.py:96, Function: _log] INFO - [33mPress CTRL+C to quit[0m
+[Time: 2024-06-18 01:28:31,033, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:28:31,148, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:28:31,152, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:28:33,169, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:33] "[36mGET / HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:33,183, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:33] "[36mGET /script.js HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:33,185, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:33] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:33,190, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:33] "[36mGET /weather.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:33,427, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:33] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:28:34,136, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:34] "[36mGET / HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:34,154, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:34] "[36mGET /script.js HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:34,155, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:34] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:34,157, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:34] "[36mGET /weather.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:34,378, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:34] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:28:34,745, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:34] "[36mGET / HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:34,758, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:34] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:34,759, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:34] "[36mGET /script.js HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:34,761, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:34] "[36mGET /weather.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:34,987, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:34] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:28:35,395, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:35] "[36mGET / HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:35,409, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:35] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:35,411, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:35] "[36mGET /script.js HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:35,413, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:35] "[36mGET /weather.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:35,635, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:35] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:28:36,079, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:36] "[36mGET / HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:36,099, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:36] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:36,102, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:36] "[36mGET /script.js HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:36,103, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:36] "[36mGET /weather.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:28:36,322, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:36] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:28:58,419, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:28:58,455, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:28:58,649, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:28:58,653, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:28:59,903, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:59] "[32mGET / HTTP/1.1[0m" 302 -
+[Time: 2024-06-18 01:28:59,909, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:59] "GET /login HTTP/1.1" 200 -
+[Time: 2024-06-18 01:28:59,944, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:28:59] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:29:00,161, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:29:00] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:29:05,791, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:29:05] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[Time: 2024-06-18 01:29:05,829, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:29:05] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[Time: 2024-06-18 01:29:05,831, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:29:05] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[Time: 2024-06-18 01:29:05,857, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:29:05] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[Time: 2024-06-18 01:29:06,065, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:29:06] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:29:06,067, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:29:06] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:29:51,285, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:29:51,321, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:29:56,927, File: _internal.py:96, Function: _log] INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.0.105:8080
+[Time: 2024-06-18 01:29:56,928, File: _internal.py:96, Function: _log] INFO - [33mPress CTRL+C to quit[0m
+[Time: 2024-06-18 01:29:56,928, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:29:57,048, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:29:57,052, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:29:59,591, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:29:59] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:30:02,096, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:30:02] "[32mPOST /login HTTP/1.1[0m" 302 -
+[Time: 2024-06-18 01:30:02,106, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:30:02] "GET / HTTP/1.1" 200 -
+[Time: 2024-06-18 01:30:02,172, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:30:02] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:30:02,172, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:30:02] "[36mGET /script.js HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:30:02,180, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:30:02] "[36mGET /weather.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:30:02,395, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:30:02] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:32:12,761, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:32:12,802, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:32:12,993, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:32:12,998, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:32:14,012, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:32:14,060, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:36:26,662, File: _internal.py:96, Function: _log] INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.0.105:8080
+[Time: 2024-06-18 01:36:26,662, File: _internal.py:96, Function: _log] INFO - [33mPress CTRL+C to quit[0m
+[Time: 2024-06-18 01:36:26,663, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:36:26,818, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:36:26,823, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:36:31,569, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:36:31] "[32mGET / HTTP/1.1[0m" 302 -
+[Time: 2024-06-18 01:36:31,576, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:36:31] "GET /login HTTP/1.1" 200 -
+[Time: 2024-06-18 01:36:31,601, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:36:31] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:36:31,820, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:36:31] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:36:37,980, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:36:37] "[32mPOST /login HTTP/1.1[0m" 302 -
+[Time: 2024-06-18 01:36:37,984, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:36:37] "GET / HTTP/1.1" 200 -
+[Time: 2024-06-18 01:36:38,018, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:36:38] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:36:38,022, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:36:38] "[36mGET /script.js HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:36:38,024, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:36:38] "[36mGET /weather.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:36:38,242, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:36:38] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:36:41,483, File: weather.py:18, Function: get_weather] DEBUG - Getting weather for 78681
+[Time: 2024-06-18 01:36:41,567, File: connectionpool.py:1055, Function: _new_conn] DEBUG - Starting new HTTPS connection (1): us-weather-by-zip-code.p.rapidapi.com:443
+[Time: 2024-06-18 01:36:42,420, File: connectionpool.py:549, Function: _make_request] DEBUG - https://us-weather-by-zip-code.p.rapidapi.com:443 "GET /getweatherzipcode?zip=78681 HTTP/1.1" 200 346
+[Time: 2024-06-18 01:36:42,426, File: weather.py:14, Function: __init__] INFO - Weather for 78681 retrieved
+[Time: 2024-06-18 01:36:42,426, File: weather.py:40, Function: verbal_weather] DEBUG - Verbose message requested for 78681
+[Time: 2024-06-18 01:36:42,427, File: weather.py:41, Function: verbal_weather] DEBUG - Weather is Overcast and a temperature is 81.0 degrees Fahrenheit
+[Time: 2024-06-18 01:36:42,436, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:36:42] "GET /get_weather?zip=78681 HTTP/1.1" 200 -
+[Time: 2024-06-18 01:38:10,158, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:38:10,200, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:38:10,414, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:38:10,420, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:38:42,050, File: _internal.py:96, Function: _log] INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.0.105:8080
+[Time: 2024-06-18 01:38:42,050, File: _internal.py:96, Function: _log] INFO - [33mPress CTRL+C to quit[0m
+[Time: 2024-06-18 01:38:42,052, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:38:42,201, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:38:42,205, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:38:44,089, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:38:44] "[32mGET / HTTP/1.1[0m" 302 -
+[Time: 2024-06-18 01:38:44,096, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:38:44] "GET /login HTTP/1.1" 200 -
+[Time: 2024-06-18 01:38:44,130, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:38:44] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:38:44,343, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:38:44] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:38:49,328, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:38:49] "[32mPOST /login HTTP/1.1[0m" 302 -
+[Time: 2024-06-18 01:38:49,332, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:38:49] "GET / HTTP/1.1" 200 -
+[Time: 2024-06-18 01:38:49,366, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:38:49] "[36mGET /weather.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:38:49,368, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:38:49] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:38:49,370, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:38:49] "[36mGET /script.js HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:38:49,589, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:38:49] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:38:55,399, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:38:55] "GET /history HTTP/1.1" 200 -
+[Time: 2024-06-18 01:38:55,635, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:38:55] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:39:03,079, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:39:03] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:39:06,966, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:39:06] "GET /history HTTP/1.1" 200 -
+[Time: 2024-06-18 01:39:07,198, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:39:07] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:40:13,015, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:40:13] "GET /history HTTP/1.1" 200 -
+[Time: 2024-06-18 01:40:13,264, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:40:13] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:40:15,957, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:40:15] "GET /history HTTP/1.1" 200 -
+[Time: 2024-06-18 01:40:16,194, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:40:16] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:40:18,500, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:40:18] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:40:22,437, File: weather.py:18, Function: get_weather] DEBUG - Getting weather for 80905
+[Time: 2024-06-18 01:40:22,550, File: connectionpool.py:1055, Function: _new_conn] DEBUG - Starting new HTTPS connection (1): us-weather-by-zip-code.p.rapidapi.com:443
+[Time: 2024-06-18 01:40:23,170, File: connectionpool.py:549, Function: _make_request] DEBUG - https://us-weather-by-zip-code.p.rapidapi.com:443 "GET /getweatherzipcode?zip=80905 HTTP/1.1" 200 352
+[Time: 2024-06-18 01:40:23,173, File: weather.py:14, Function: __init__] INFO - Weather for 80905 retrieved
+[Time: 2024-06-18 01:40:23,173, File: weather.py:40, Function: verbal_weather] DEBUG - Verbose message requested for 80905
+[Time: 2024-06-18 01:40:23,173, File: weather.py:41, Function: verbal_weather] DEBUG - Weather is Fair and a temperature is 51.0 degrees Fahrenheit
+[Time: 2024-06-18 01:40:23,177, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:40:23] "GET /get_weather?zip=80905 HTTP/1.1" 200 -
+[Time: 2024-06-18 01:40:29,511, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:40:29] "GET /history HTTP/1.1" 200 -
+[Time: 2024-06-18 01:40:29,757, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:40:29] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 01:40:40,369, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 01:40:40] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 01:42:12,819, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:42:12,855, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:42:13,055, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:42:13,060, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 01:42:15,088, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/weatherapp/app.py', reloading
+[Time: 2024-06-18 01:42:15,134, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 01:42:15,263, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 01:42:15,267, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 02:09:04,033, File: _internal.py:96, Function: _log] INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.0.105:8080
+[Time: 2024-06-18 02:09:04,033, File: _internal.py:96, Function: _log] INFO - [33mPress CTRL+C to quit[0m
+[Time: 2024-06-18 02:09:04,034, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 02:09:04,156, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 02:09:04,191, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 02:09:08,129, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 02:09:08] "[32mGET / HTTP/1.1[0m" 302 -
+[Time: 2024-06-18 02:09:08,137, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 02:09:08] "GET /login HTTP/1.1" 200 -
+[Time: 2024-06-18 02:09:08,164, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 02:09:08] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 02:09:08,367, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 02:09:08] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 02:09:15,263, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 02:09:15] "GET /register HTTP/1.1" 200 -
+[Time: 2024-06-18 02:09:15,287, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 02:09:15] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 02:09:15,511, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 02:09:15] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 02:09:40,338, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 02:09:40] "[32mPOST /register HTTP/1.1[0m" 302 -
+[Time: 2024-06-18 02:09:40,345, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 02:09:40] "GET /login HTTP/1.1" 200 -
+[Time: 2024-06-18 02:09:40,384, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 02:09:40] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 02:09:40,592, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 02:09:40] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 02:09:45,303, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 02:09:45] "[32mPOST /login HTTP/1.1[0m" 302 -
+[Time: 2024-06-18 02:09:45,312, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 02:09:45] "GET / HTTP/1.1" 200 -
+[Time: 2024-06-18 02:09:45,359, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 02:09:45] "[36mGET /script.js HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 02:09:45,360, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 02:09:45] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 02:09:45,361, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 02:09:45] "[36mGET /weather.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 02:09:45,580, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 02:09:45] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 02:09:48,989, File: weather.py:18, Function: get_weather] DEBUG - Getting weather for 80905
+[Time: 2024-06-18 02:09:49,107, File: connectionpool.py:1055, Function: _new_conn] DEBUG - Starting new HTTPS connection (1): us-weather-by-zip-code.p.rapidapi.com:443
+[Time: 2024-06-18 02:09:50,020, File: connectionpool.py:549, Function: _make_request] DEBUG - https://us-weather-by-zip-code.p.rapidapi.com:443 "GET /getweatherzipcode?zip=80905 HTTP/1.1" 200 352
+[Time: 2024-06-18 02:09:50,022, File: weather.py:14, Function: __init__] INFO - Weather for 80905 retrieved
+[Time: 2024-06-18 02:09:50,022, File: weather.py:40, Function: verbal_weather] DEBUG - Verbose message requested for 80905
+[Time: 2024-06-18 02:09:50,023, File: weather.py:41, Function: verbal_weather] DEBUG - Weather is Fair and a temperature is 51.0 degrees Fahrenheit
+[Time: 2024-06-18 02:09:50,936, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 02:09:50] "GET /get_weather?zip=80905 HTTP/1.1" 200 -
+[Time: 2024-06-18 02:10:08,638, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 02:10:08] "[33mGET /history' HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 02:10:08,883, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 02:10:08] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 02:10:12,701, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 02:10:12] "GET /history HTTP/1.1" 200 -
+[Time: 2024-06-18 02:10:12,939, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 02:10:12] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 14:02:20,881, File: _internal.py:96, Function: _log] INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.0.105:8080
+[Time: 2024-06-18 14:02:20,881, File: _internal.py:96, Function: _log] INFO - [33mPress CTRL+C to quit[0m
+[Time: 2024-06-18 14:02:20,882, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 14:02:21,022, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 14:02:21,031, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 14:02:27,694, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 14:02:27] "[32mGET / HTTP/1.1[0m" 302 -
+[Time: 2024-06-18 14:02:27,701, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 14:02:27] "GET /login HTTP/1.1" 200 -
+[Time: 2024-06-18 14:02:27,743, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 14:02:27] "GET /style.css HTTP/1.1" 200 -
+[Time: 2024-06-18 14:02:27,924, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 14:02:27] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 14:02:28,859, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 14:02:28] "[32mGET /history HTTP/1.1[0m" 302 -
+[Time: 2024-06-18 14:02:28,863, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 14:02:28] "GET /login HTTP/1.1" 200 -
+[Time: 2024-06-18 14:02:28,910, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 14:02:28] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 14:02:29,097, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 14:02:29] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 14:02:37,511, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 14:02:37] "POST /login HTTP/1.1" 200 -
+[Time: 2024-06-18 14:02:37,572, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 14:02:37] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 16:44:59,708, File: _internal.py:96, Function: _log] INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.0.105:8080
+[Time: 2024-06-18 16:44:59,708, File: _internal.py:96, Function: _log] INFO - [33mPress CTRL+C to quit[0m
+[Time: 2024-06-18 16:44:59,709, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 16:45:00,062, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 16:45:00,070, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 16:45:05,922, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 16:45:05] "[32mGET / HTTP/1.1[0m" 302 -
+[Time: 2024-06-18 16:45:05,932, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 16:45:05] "GET /login HTTP/1.1" 200 -
+[Time: 2024-06-18 16:45:05,976, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 16:45:05] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 16:45:06,206, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 16:45:06] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 16:45:18,502, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 16:45:18] "GET /register HTTP/1.1" 200 -
+[Time: 2024-06-18 16:45:18,531, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 16:45:18] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 16:45:18,584, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 16:45:18] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 16:45:30,009, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 16:45:30] "[32mPOST /register HTTP/1.1[0m" 302 -
+[Time: 2024-06-18 16:45:30,013, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 16:45:30] "GET /login HTTP/1.1" 200 -
+[Time: 2024-06-18 16:45:30,030, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 16:45:30] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 16:45:30,082, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 16:45:30] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 16:45:35,383, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 16:45:35] "[32mPOST /login HTTP/1.1[0m" 302 -
+[Time: 2024-06-18 16:45:35,390, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 16:45:35] "GET / HTTP/1.1" 200 -
+[Time: 2024-06-18 16:45:35,410, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 16:45:35] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 16:45:35,414, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 16:45:35] "GET /script.js HTTP/1.1" 200 -
+[Time: 2024-06-18 16:45:35,425, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 16:45:35] "GET /weather.png HTTP/1.1" 200 -
+[Time: 2024-06-18 16:45:35,483, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 16:45:35] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 16:45:39,491, File: weather.py:18, Function: get_weather] DEBUG - Getting weather for 80905
+[Time: 2024-06-18 16:45:39,655, File: connectionpool.py:1055, Function: _new_conn] DEBUG - Starting new HTTPS connection (1): us-weather-by-zip-code.p.rapidapi.com:443
+[Time: 2024-06-18 16:45:40,316, File: connectionpool.py:549, Function: _make_request] DEBUG - https://us-weather-by-zip-code.p.rapidapi.com:443 "GET /getweatherzipcode?zip=80905 HTTP/1.1" 200 352
+[Time: 2024-06-18 16:45:40,320, File: weather.py:14, Function: __init__] INFO - Weather for 80905 retrieved
+[Time: 2024-06-18 16:45:40,320, File: weather.py:40, Function: verbal_weather] DEBUG - Verbose message requested for 80905
+[Time: 2024-06-18 16:45:40,320, File: weather.py:41, Function: verbal_weather] DEBUG - Weather is Fair and a temperature is 51.0 degrees Fahrenheit
+[Time: 2024-06-18 16:45:40,323, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 16:45:40] "GET /get_weather?zip=80905 HTTP/1.1" 200 -
+[Time: 2024-06-18 16:45:43,817, File: weather.py:18, Function: get_weather] DEBUG - Getting weather for 78681
+[Time: 2024-06-18 16:45:43,822, File: connectionpool.py:1055, Function: _new_conn] DEBUG - Starting new HTTPS connection (1): us-weather-by-zip-code.p.rapidapi.com:443
+[Time: 2024-06-18 16:45:44,335, File: connectionpool.py:549, Function: _make_request] DEBUG - https://us-weather-by-zip-code.p.rapidapi.com:443 "GET /getweatherzipcode?zip=78681 HTTP/1.1" 200 346
+[Time: 2024-06-18 16:45:44,338, File: weather.py:14, Function: __init__] INFO - Weather for 78681 retrieved
+[Time: 2024-06-18 16:45:44,339, File: weather.py:40, Function: verbal_weather] DEBUG - Verbose message requested for 78681
+[Time: 2024-06-18 16:45:44,339, File: weather.py:41, Function: verbal_weather] DEBUG - Weather is Overcast and a temperature is 81.0 degrees Fahrenheit
+[Time: 2024-06-18 16:45:44,342, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 16:45:44] "GET /get_weather?zip=78681 HTTP/1.1" 200 -
+[Time: 2024-06-18 16:45:47,275, File: weather.py:18, Function: get_weather] DEBUG - Getting weather for 80906
+[Time: 2024-06-18 16:45:47,279, File: connectionpool.py:1055, Function: _new_conn] DEBUG - Starting new HTTPS connection (1): us-weather-by-zip-code.p.rapidapi.com:443
+[Time: 2024-06-18 16:45:47,909, File: connectionpool.py:549, Function: _make_request] DEBUG - https://us-weather-by-zip-code.p.rapidapi.com:443 "GET /getweatherzipcode?zip=80906 HTTP/1.1" 200 352
+[Time: 2024-06-18 16:45:47,912, File: weather.py:14, Function: __init__] INFO - Weather for 80906 retrieved
+[Time: 2024-06-18 16:45:47,912, File: weather.py:40, Function: verbal_weather] DEBUG - Verbose message requested for 80906
+[Time: 2024-06-18 16:45:47,912, File: weather.py:41, Function: verbal_weather] DEBUG - Weather is Fair and a temperature is 51.0 degrees Fahrenheit
+[Time: 2024-06-18 16:45:47,917, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 16:45:47] "GET /get_weather?zip=80906 HTTP/1.1" 200 -
+[Time: 2024-06-18 16:53:02,256, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 16:53:02] "GET /register HTTP/1.1" 200 -
+[Time: 2024-06-18 16:53:02,265, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 16:53:02] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 16:53:02,530, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 16:53:02] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 16:53:38,580, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 16:53:38] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 17:00:24,144, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:00:24] "GET /login HTTP/1.1" 200 -
+[Time: 2024-06-18 17:00:24,163, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:00:24] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 17:00:24,388, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:00:24] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 17:03:31,488, File: _internal.py:96, Function: _log] INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.0.105:8080
+[Time: 2024-06-18 17:03:31,488, File: _internal.py:96, Function: _log] INFO - [33mPress CTRL+C to quit[0m
+[Time: 2024-06-18 17:03:31,489, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 17:03:31,974, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 17:03:31,988, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 17:03:58,741, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:03:58] "[32mGET / HTTP/1.1[0m" 302 -
+[Time: 2024-06-18 17:03:58,749, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:03:58] "GET /login HTTP/1.1" 200 -
+[Time: 2024-06-18 17:03:58,780, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:03:58] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 17:03:58,977, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:03:58] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 17:06:34,210, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/ref_weatherapp/app.py', reloading
+[Time: 2024-06-18 17:06:34,343, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 17:06:34,751, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 17:06:34,758, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 17:06:36,802, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/ref_weatherapp/app.py', reloading
+[Time: 2024-06-18 17:06:36,900, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 17:06:37,275, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 17:06:37,283, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 17:10:03,239, File: _internal.py:96, Function: _log] INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.0.105:8080
+[Time: 2024-06-18 17:10:03,240, File: _internal.py:96, Function: _log] INFO - [33mPress CTRL+C to quit[0m
+[Time: 2024-06-18 17:10:03,241, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 17:10:03,560, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 17:10:03,568, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 17:10:06,706, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:10:06] "GET /login HTTP/1.1" 200 -
+[Time: 2024-06-18 17:10:06,734, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:10:06] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 17:10:06,782, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:10:06] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 17:10:10,884, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:10:10] "[32mPOST /login HTTP/1.1[0m" 302 -
+[Time: 2024-06-18 17:10:10,893, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:10:10] "GET / HTTP/1.1" 200 -
+[Time: 2024-06-18 17:10:10,913, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:10:10] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 17:10:10,921, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:10:10] "[36mGET /script.js HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 17:10:10,926, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:10:10] "[36mGET /weather.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 17:10:10,992, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:10:10] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 17:10:18,325, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:10:18] "GET /history HTTP/1.1" 200 -
+[Time: 2024-06-18 17:10:18,350, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:10:18] "GET /history.css HTTP/1.1" 200 -
+[Time: 2024-06-18 17:10:18,407, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:10:18] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 17:45:23,216, File: _internal.py:96, Function: _log] INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.0.105:8080
+[Time: 2024-06-18 17:45:23,216, File: _internal.py:96, Function: _log] INFO - [33mPress CTRL+C to quit[0m
+[Time: 2024-06-18 17:45:23,217, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
+[Time: 2024-06-18 17:45:23,538, File: _internal.py:96, Function: _log] WARNING -  * Debugger is active!
+[Time: 2024-06-18 17:45:23,549, File: _internal.py:96, Function: _log] INFO -  * Debugger PIN: 100-174-854
+[Time: 2024-06-18 17:45:33,357, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:45:33] "GET /register HTTP/1.1" 200 -
+[Time: 2024-06-18 17:45:33,379, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:45:33] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 17:45:33,603, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:45:33] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 17:45:44,530, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:45:44] "[32mPOST /register HTTP/1.1[0m" 302 -
+[Time: 2024-06-18 17:45:44,535, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:45:44] "GET /login HTTP/1.1" 200 -
+[Time: 2024-06-18 17:45:44,564, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:45:44] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 17:45:44,610, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:45:44] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 17:45:48,574, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:45:48] "[32mPOST /login HTTP/1.1[0m" 302 -
+[Time: 2024-06-18 17:45:48,580, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:45:48] "[36mGET / HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 17:45:48,601, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:45:48] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 17:45:48,607, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:45:48] "[36mGET /weather.png HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 17:45:48,609, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:45:48] "[36mGET /script.js HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 17:45:48,677, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:45:48] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 17:45:52,749, File: weather.py:18, Function: get_weather] DEBUG - Getting weather for 78681
+[Time: 2024-06-18 17:45:52,840, File: connectionpool.py:1055, Function: _new_conn] DEBUG - Starting new HTTPS connection (1): us-weather-by-zip-code.p.rapidapi.com:443
+[Time: 2024-06-18 17:45:53,726, File: connectionpool.py:549, Function: _make_request] DEBUG - https://us-weather-by-zip-code.p.rapidapi.com:443 "GET /getweatherzipcode?zip=78681 HTTP/1.1" 200 346
+[Time: 2024-06-18 17:45:53,731, File: weather.py:14, Function: __init__] INFO - Weather for 78681 retrieved
+[Time: 2024-06-18 17:45:53,731, File: weather.py:40, Function: verbal_weather] DEBUG - Verbose message requested for 78681
+[Time: 2024-06-18 17:45:53,731, File: weather.py:41, Function: verbal_weather] DEBUG - Weather is Overcast and a temperature is 81.0 degrees Fahrenheit
+[Time: 2024-06-18 17:45:54,473, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:45:54] "GET /get_weather?zip=78681 HTTP/1.1" 200 -
+[Time: 2024-06-18 17:46:15,663, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:46:15] "GET /register HTTP/1.1" 200 -
+[Time: 2024-06-18 17:46:15,676, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:46:15] "[36mGET /style.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 17:46:15,920, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:46:15] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 17:46:18,073, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:46:18] "GET /history HTTP/1.1" 200 -
+[Time: 2024-06-18 17:46:18,099, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:46:18] "[36mGET /history.css HTTP/1.1[0m" 304 -
+[Time: 2024-06-18 17:46:18,300, File: _internal.py:96, Function: _log] INFO - 127.0.0.1 - - [18/Jun/2024 17:46:18] "[33mGET /cart.json HTTP/1.1[0m" 404 -
+[Time: 2024-06-18 17:59:22,095, File: _internal.py:96, Function: _log] INFO -  * Detected change in '/Users/ybernstein/repos/lesson13/ref_weatherapp/config.py', reloading
+[Time: 2024-06-18 17:59:22,210, File: _internal.py:96, Function: _log] INFO -  * Restarting with stat
