@@ -9,6 +9,6 @@ entries:
     name: k8s-dashboard
     type: application
     urls:
-    - https://github.com/yuribernstein/gde-devops/k8s-dashboard-0.1.0.tgz
+    - https://yuribernstein.github.io/gde-devops/k8s-dashboard-0.1.0.tgz
     version: 0.1.0
 generated: "2024-06-25T13:24:59.155419-06:00"
