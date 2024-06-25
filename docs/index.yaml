@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  k8s-dashboard:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-06-25T13:24:59.156088-06:00"
+    description: A Helm chart for Kubernetes
+    digest: fd7eb45372ae150d73361d6f246e0244e7cd67fd80ba780c760d11c85c542f93
+    name: k8s-dashboard
+    type: application
+    urls:
+    - https://github.com/yuribernstein/gde-devops/k8s-dashboard-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-06-25T13:24:59.155419-06:00"
