@@ -9,7 +9,7 @@ entries:
     name: k8s-dashboard
     type: application
     urls:
-    - https://yuribernstein.github.io/yuribernstein/gde-devops/k8s-dashboard-0.1.2.tgz
+    - https://yuribernstein.github.io/yuribernstein/gde-devops/docs/k8s-dashboard-0.1.2.tgz
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.16.0
