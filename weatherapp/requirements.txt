@@ -1,4 +1,0 @@
-requests
-flask
-flask-mysqldb
-boto3
