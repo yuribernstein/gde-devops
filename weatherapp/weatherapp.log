@@ -1,0 +1,400 @@
+[Time: 2024-07-01 13:17:55,346, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+[Time: 2024-07-01 13:17:55,349, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from before-call.apigateway to before-call.api-gateway
+[Time: 2024-07-01 13:17:55,350, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+[Time: 2024-07-01 13:17:55,352, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+[Time: 2024-07-01 13:17:55,352, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+[Time: 2024-07-01 13:17:55,353, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+[Time: 2024-07-01 13:17:55,354, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+[Time: 2024-07-01 13:17:55,357, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+[Time: 2024-07-01 13:17:55,357, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+[Time: 2024-07-01 13:17:55,357, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+[Time: 2024-07-01 13:17:55,357, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+[Time: 2024-07-01 13:17:55,362, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/endpoints.json
+[Time: 2024-07-01 13:17:55,377, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/sdk-default-configuration.json
+[Time: 2024-07-01 13:17:55,378, File: hooks.py:238, Function: _emit] DEBUG - Event choose-service-name: calling handler <function handle_service_name_alias at 0x106203880>
+[Time: 2024-07-01 13:17:55,415, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/s3/2006-03-01/service-2.json.gz
+[Time: 2024-07-01 13:17:55,431, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/s3/2006-03-01/endpoint-rule-set-1.json.gz
+[Time: 2024-07-01 13:17:55,434, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/partitions.json
+[Time: 2024-07-01 13:17:55,435, File: hooks.py:238, Function: _emit] DEBUG - Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x10615d5a0>
+[Time: 2024-07-01 13:17:55,436, File: hooks.py:238, Function: _emit] DEBUG - Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x104fa7010>
+[Time: 2024-07-01 13:17:55,485, File: hooks.py:238, Function: _emit] DEBUG - Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x10615d360>
+[Time: 2024-07-01 13:17:55,485, File: configprovider.py:948, Function: provide] DEBUG - Looking for endpoint for s3 via: environment_service
+[Time: 2024-07-01 13:17:55,485, File: configprovider.py:948, Function: provide] DEBUG - Looking for endpoint for s3 via: environment_global
+[Time: 2024-07-01 13:17:55,485, File: configprovider.py:948, Function: provide] DEBUG - Looking for endpoint for s3 via: config_service
+[Time: 2024-07-01 13:17:55,485, File: configprovider.py:948, Function: provide] DEBUG - Looking for endpoint for s3 via: config_global
+[Time: 2024-07-01 13:17:55,485, File: configprovider.py:964, Function: provide] DEBUG - No configured endpoint found.
+[Time: 2024-07-01 13:17:55,552, File: endpoint.py:408, Function: create_endpoint] DEBUG - Setting s3 timeout as (60, 60)
+[Time: 2024-07-01 13:17:55,560, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/_retry.json
+[Time: 2024-07-01 13:17:55,560, File: client.py:285, Function: _register_legacy_retries] DEBUG - Registering retry handlers for service: s3
+[Time: 2024-07-01 13:17:55,560, File: utils.py:1721, Function: register] DEBUG - Registering S3 region redirector handler
+[Time: 2024-07-01 13:17:55,560, File: utils.py:1669, Function: register] DEBUG - Registering S3Express Identity Resolver
+[Time: 2024-07-01 13:17:55,561, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function sse_md5 at 0x106221240>
+[Time: 2024-07-01 13:17:55,561, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function validate_bucket_name at 0x1062211b0>
+[Time: 2024-07-01 13:17:55,561, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x106223010>
+[Time: 2024-07-01 13:17:55,561, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x106cded70>>
+[Time: 2024-07-01 13:17:55,561, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x1062d2650>>
+[Time: 2024-07-01 13:17:55,561, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function generate_idempotent_uuid at 0x106221000>
+[Time: 2024-07-01 13:17:55,561, File: hooks.py:238, Function: _emit] DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x1062231c0>
+[Time: 2024-07-01 13:17:55,561, File: hooks.py:238, Function: _emit] DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x106cded70>>
+[Time: 2024-07-01 13:17:55,561, File: regions.py:498, Function: construct_endpoint] DEBUG - Calling endpoint provider with parameters: {'Bucket': 'weatherapp-configuration', 'Region': 'us-east-2', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'configuration/None/configuration.json', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+[Time: 2024-07-01 13:17:55,562, File: regions.py:513, Function: construct_endpoint] DEBUG - Endpoint provider result: https://weatherapp-configuration.s3.us-east-2.amazonaws.com
+[Time: 2024-07-01 13:17:55,562, File: regions.py:660, Function: auth_schemes_to_signing_ctx] DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+[Time: 2024-07-01 13:17:55,562, File: regions.py:733, Function: auth_schemes_to_signing_ctx] DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'us-east-2', 'signing_name': 's3', 'disableDoubleEncoding': True}
+[Time: 2024-07-01 13:17:55,562, File: hooks.py:238, Function: _emit] DEBUG - Event before-call.s3.GetObject: calling handler <function add_expect_header at 0x106221510>
+[Time: 2024-07-01 13:17:55,562, File: hooks.py:238, Function: _emit] DEBUG - Event before-call.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x106cdedd0>>
+[Time: 2024-07-01 13:17:55,562, File: hooks.py:238, Function: _emit] DEBUG - Event before-call.s3.GetObject: calling handler <function add_recursion_detection_header at 0x106220ca0>
+[Time: 2024-07-01 13:17:55,562, File: hooks.py:238, Function: _emit] DEBUG - Event before-call.s3.GetObject: calling handler <function inject_api_version_header_if_needed at 0x106222830>
+[Time: 2024-07-01 13:17:55,562, File: endpoint.py:114, Function: make_request] DEBUG - Making request for OperationModel(name=GetObject) with params: {'url_path': '/configuration/None/configuration.json', 'query_string': {}, 'method': 'GET', 'headers': {'User-Agent': 'Boto3/1.34.109 md/Botocore#1.34.109 ua/2.0 os/macos#22.3.0 md/arch#arm64 lang/python#3.10.1 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.109'}, 'body': b'', 'auth_path': '/weatherapp-configuration/configuration/None/configuration.json', 'url': 'https://weatherapp-configuration.s3.us-east-2.amazonaws.com/configuration/None/configuration.json', 'context': {'client_region': 'us-east-2', 'client_config': <botocore.config.Config object at 0x106c37220>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'weatherapp-configuration', 'params': {'Bucket': 'weatherapp-configuration', 'Key': 'configuration/None/configuration.json'}}, 'input_params': {'Bucket': 'weatherapp-configuration', 'Key': 'configuration/None/configuration.json'}, 'signing': {'region': 'us-east-2', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'us-east-2'}]}}}
+[Time: 2024-07-01 13:17:55,563, File: hooks.py:238, Function: _emit] DEBUG - Event request-created.s3.GetObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x106b28a30>>
+[Time: 2024-07-01 13:17:55,563, File: hooks.py:238, Function: _emit] DEBUG - Event choose-signer.s3.GetObject: calling handler <function set_operation_specific_signer at 0x106220ee0>
+[Time: 2024-07-01 13:17:55,563, File: hooks.py:238, Function: _emit] DEBUG - Event before-sign.s3.GetObject: calling handler <function remove_arn_from_signing_path at 0x106223130>
+[Time: 2024-07-01 13:17:55,563, File: hooks.py:238, Function: _emit] DEBUG - Event before-sign.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x106cdedd0>>
+[Time: 2024-07-01 13:17:55,563, File: auth.py:425, Function: add_auth] DEBUG - Calculating signature using v4 auth.
+[Time: 2024-07-01 13:17:55,563, File: auth.py:426, Function: add_auth] DEBUG - CanonicalRequest:
+GET
+/configuration/None/configuration.json
+
+host:weatherapp-configuration.s3.us-east-2.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240701T191755Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+[Time: 2024-07-01 13:17:55,563, File: auth.py:428, Function: add_auth] DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20240701T191755Z
+20240701/us-east-2/s3/aws4_request
+fa40b78496798eacb5f1797322429cc01b0092e5d5824675f584771859e3ad4b
+[Time: 2024-07-01 13:17:55,563, File: auth.py:430, Function: add_auth] DEBUG - Signature:
+5e74f44b18ce2160341e03a44163d32e44038ed2df1a11477e2049818ea79519
+[Time: 2024-07-01 13:17:55,563, File: hooks.py:238, Function: _emit] DEBUG - Event request-created.s3.GetObject: calling handler <function add_retry_headers at 0x106222f80>
+[Time: 2024-07-01 13:17:55,563, File: endpoint.py:265, Function: _do_get_response] DEBUG - Sending http request: <AWSPreparedRequest stream_output=True, method=GET, url=https://weatherapp-configuration.s3.us-east-2.amazonaws.com/configuration/None/configuration.json, headers={'User-Agent': b'Boto3/1.34.109 md/Botocore#1.34.109 ua/2.0 os/macos#22.3.0 md/arch#arm64 lang/python#3.10.1 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.109', 'X-Amz-Date': b'20240701T191755Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA6ODUZ5F3JB7CA2H7/20240701/us-east-2/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=5e74f44b18ce2160341e03a44163d32e44038ed2df1a11477e2049818ea79519', 'amz-sdk-invocation-id': b'01c9285a-9a75-41bd-a8e2-ce05f8474e4f', 'amz-sdk-request': b'attempt=1'}>
+[Time: 2024-07-01 13:17:55,565, File: httpsession.py:97, Function: get_cert_path] DEBUG - Certificate path: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/certifi/cacert.pem
+[Time: 2024-07-01 13:17:55,565, File: connectionpool.py:1055, Function: _new_conn] DEBUG - Starting new HTTPS connection (1): weatherapp-configuration.s3.us-east-2.amazonaws.com:443
+[Time: 2024-07-01 13:17:55,867, File: connectionpool.py:549, Function: _make_request] DEBUG - https://weatherapp-configuration.s3.us-east-2.amazonaws.com:443 "GET /configuration/None/configuration.json HTTP/1.1" 403 None
+[Time: 2024-07-01 13:17:55,868, File: parsers.py:240, Function: parse] DEBUG - Response headers: {'x-amz-request-id': 'P47V96GYZ3QPQ2GQ', 'x-amz-id-2': 'GHKWEcwlr4xYMn4/U0mc9KjbCu5F+9I2WS8ATjJNViTR9UEh68PftyQASZTAJO29cGm6KK4UOEtc7Me9FwcP8dZFDlNqPjFvAeUkrpQia2k=', 'Content-Type': 'application/xml', 'Transfer-Encoding': 'chunked', 'Date': 'Mon, 01 Jul 2024 19:17:55 GMT', 'Server': 'AmazonS3'}
+[Time: 2024-07-01 13:17:55,869, File: parsers.py:241, Function: parse] DEBUG - Response body:
+b'<?xml version="1.0" encoding="UTF-8"?>\n<Error><Code>AccessDenied</Code><Message>Access Denied</Message><RequestId>P47V96GYZ3QPQ2GQ</RequestId><HostId>GHKWEcwlr4xYMn4/U0mc9KjbCu5F+9I2WS8ATjJNViTR9UEh68PftyQASZTAJO29cGm6KK4UOEtc7Me9FwcP8dZFDlNqPjFvAeUkrpQia2k=</HostId></Error>'
+[Time: 2024-07-01 13:17:55,875, File: hooks.py:238, Function: _emit] DEBUG - Event needs-retry.s3.GetObject: calling handler <botocore.retryhandler.RetryHandler object at 0x106cdecb0>
+[Time: 2024-07-01 13:17:55,875, File: retryhandler.py:211, Function: __call__] DEBUG - No retry needed.
+[Time: 2024-07-01 13:17:55,875, File: hooks.py:238, Function: _emit] DEBUG - Event needs-retry.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x106cded70>>
+[Time: 2024-07-01 13:27:20,641, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+[Time: 2024-07-01 13:27:20,647, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from before-call.apigateway to before-call.api-gateway
+[Time: 2024-07-01 13:27:20,648, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+[Time: 2024-07-01 13:27:20,650, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+[Time: 2024-07-01 13:27:20,650, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+[Time: 2024-07-01 13:27:20,651, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+[Time: 2024-07-01 13:27:20,652, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+[Time: 2024-07-01 13:27:20,655, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+[Time: 2024-07-01 13:27:20,655, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+[Time: 2024-07-01 13:27:20,655, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+[Time: 2024-07-01 13:27:20,655, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+[Time: 2024-07-01 13:27:20,662, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/endpoints.json
+[Time: 2024-07-01 13:27:20,697, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/sdk-default-configuration.json
+[Time: 2024-07-01 13:27:20,697, File: hooks.py:238, Function: _emit] DEBUG - Event choose-service-name: calling handler <function handle_service_name_alias at 0x106203880>
+[Time: 2024-07-01 13:27:20,730, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/s3/2006-03-01/service-2.json.gz
+[Time: 2024-07-01 13:27:20,744, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/s3/2006-03-01/endpoint-rule-set-1.json.gz
+[Time: 2024-07-01 13:27:20,746, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/partitions.json
+[Time: 2024-07-01 13:27:20,747, File: hooks.py:238, Function: _emit] DEBUG - Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x10615d5a0>
+[Time: 2024-07-01 13:27:20,747, File: hooks.py:238, Function: _emit] DEBUG - Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x106aa3d00>
+[Time: 2024-07-01 13:27:20,747, File: hooks.py:238, Function: _emit] DEBUG - Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x10615d360>
+[Time: 2024-07-01 13:27:20,747, File: configprovider.py:948, Function: provide] DEBUG - Looking for endpoint for s3 via: environment_service
+[Time: 2024-07-01 13:27:20,747, File: configprovider.py:948, Function: provide] DEBUG - Looking for endpoint for s3 via: environment_global
+[Time: 2024-07-01 13:27:20,747, File: configprovider.py:948, Function: provide] DEBUG - Looking for endpoint for s3 via: config_service
+[Time: 2024-07-01 13:27:20,747, File: configprovider.py:948, Function: provide] DEBUG - Looking for endpoint for s3 via: config_global
+[Time: 2024-07-01 13:27:20,747, File: configprovider.py:964, Function: provide] DEBUG - No configured endpoint found.
+[Time: 2024-07-01 13:27:20,774, File: endpoint.py:408, Function: create_endpoint] DEBUG - Setting s3 timeout as (60, 60)
+[Time: 2024-07-01 13:27:20,776, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/_retry.json
+[Time: 2024-07-01 13:27:20,776, File: client.py:285, Function: _register_legacy_retries] DEBUG - Registering retry handlers for service: s3
+[Time: 2024-07-01 13:27:20,776, File: utils.py:1721, Function: register] DEBUG - Registering S3 region redirector handler
+[Time: 2024-07-01 13:27:20,776, File: utils.py:1669, Function: register] DEBUG - Registering S3Express Identity Resolver
+[Time: 2024-07-01 13:27:20,776, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function sse_md5 at 0x106221240>
+[Time: 2024-07-01 13:27:20,777, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function validate_bucket_name at 0x1062211b0>
+[Time: 2024-07-01 13:27:20,777, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x106223010>
+[Time: 2024-07-01 13:27:20,777, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x10b7b0a30>>
+[Time: 2024-07-01 13:27:20,777, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x106dd3910>>
+[Time: 2024-07-01 13:27:20,777, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function generate_idempotent_uuid at 0x106221000>
+[Time: 2024-07-01 13:27:20,777, File: hooks.py:238, Function: _emit] DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x1062231c0>
+[Time: 2024-07-01 13:27:20,777, File: hooks.py:238, Function: _emit] DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x10b7b0a30>>
+[Time: 2024-07-01 13:27:20,777, File: regions.py:498, Function: construct_endpoint] DEBUG - Calling endpoint provider with parameters: {'Bucket': 'weatherapp-configuration', 'Region': 'us-east-2', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'configuration/None/configuration.json', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+[Time: 2024-07-01 13:27:20,777, File: regions.py:513, Function: construct_endpoint] DEBUG - Endpoint provider result: https://weatherapp-configuration.s3.us-east-2.amazonaws.com
+[Time: 2024-07-01 13:27:20,777, File: regions.py:660, Function: auth_schemes_to_signing_ctx] DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+[Time: 2024-07-01 13:27:20,777, File: regions.py:733, Function: auth_schemes_to_signing_ctx] DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'us-east-2', 'signing_name': 's3', 'disableDoubleEncoding': True}
+[Time: 2024-07-01 13:27:20,777, File: hooks.py:238, Function: _emit] DEBUG - Event before-call.s3.GetObject: calling handler <function add_expect_header at 0x106221510>
+[Time: 2024-07-01 13:27:20,777, File: hooks.py:238, Function: _emit] DEBUG - Event before-call.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x10b7b0a90>>
+[Time: 2024-07-01 13:27:20,777, File: hooks.py:238, Function: _emit] DEBUG - Event before-call.s3.GetObject: calling handler <function add_recursion_detection_header at 0x106220ca0>
+[Time: 2024-07-01 13:27:20,777, File: hooks.py:238, Function: _emit] DEBUG - Event before-call.s3.GetObject: calling handler <function inject_api_version_header_if_needed at 0x106222830>
+[Time: 2024-07-01 13:27:20,777, File: endpoint.py:114, Function: make_request] DEBUG - Making request for OperationModel(name=GetObject) with params: {'url_path': '/configuration/None/configuration.json', 'query_string': {}, 'method': 'GET', 'headers': {'User-Agent': 'Boto3/1.34.109 md/Botocore#1.34.109 ua/2.0 os/macos#22.3.0 md/arch#arm64 lang/python#3.10.1 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.109'}, 'body': b'', 'auth_path': '/weatherapp-configuration/configuration/None/configuration.json', 'url': 'https://weatherapp-configuration.s3.us-east-2.amazonaws.com/configuration/None/configuration.json', 'context': {'client_region': 'us-east-2', 'client_config': <botocore.config.Config object at 0x10b7755a0>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'weatherapp-configuration', 'params': {'Bucket': 'weatherapp-configuration', 'Key': 'configuration/None/configuration.json'}}, 'input_params': {'Bucket': 'weatherapp-configuration', 'Key': 'configuration/None/configuration.json'}, 'signing': {'region': 'us-east-2', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'us-east-2'}]}}}
+[Time: 2024-07-01 13:27:20,778, File: hooks.py:238, Function: _emit] DEBUG - Event request-created.s3.GetObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x10b775510>>
+[Time: 2024-07-01 13:27:20,778, File: hooks.py:238, Function: _emit] DEBUG - Event choose-signer.s3.GetObject: calling handler <function set_operation_specific_signer at 0x106220ee0>
+[Time: 2024-07-01 13:27:20,778, File: hooks.py:238, Function: _emit] DEBUG - Event before-sign.s3.GetObject: calling handler <function remove_arn_from_signing_path at 0x106223130>
+[Time: 2024-07-01 13:27:20,778, File: hooks.py:238, Function: _emit] DEBUG - Event before-sign.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x10b7b0a90>>
+[Time: 2024-07-01 13:27:20,778, File: auth.py:425, Function: add_auth] DEBUG - Calculating signature using v4 auth.
+[Time: 2024-07-01 13:27:20,778, File: auth.py:426, Function: add_auth] DEBUG - CanonicalRequest:
+GET
+/configuration/None/configuration.json
+
+host:weatherapp-configuration.s3.us-east-2.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240701T192720Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+[Time: 2024-07-01 13:27:20,778, File: auth.py:428, Function: add_auth] DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20240701T192720Z
+20240701/us-east-2/s3/aws4_request
+1a93dd6a99fade9fc2746598d7285ccf478829d96a3d049bab9e3da92154d254
+[Time: 2024-07-01 13:27:20,778, File: auth.py:430, Function: add_auth] DEBUG - Signature:
+9d38955ad1ccd5d7d056fda33d5b7709f53732d64b5c504b5d755478517fa983
+[Time: 2024-07-01 13:27:20,778, File: hooks.py:238, Function: _emit] DEBUG - Event request-created.s3.GetObject: calling handler <function add_retry_headers at 0x106222f80>
+[Time: 2024-07-01 13:27:20,778, File: endpoint.py:265, Function: _do_get_response] DEBUG - Sending http request: <AWSPreparedRequest stream_output=True, method=GET, url=https://weatherapp-configuration.s3.us-east-2.amazonaws.com/configuration/None/configuration.json, headers={'User-Agent': b'Boto3/1.34.109 md/Botocore#1.34.109 ua/2.0 os/macos#22.3.0 md/arch#arm64 lang/python#3.10.1 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.109', 'X-Amz-Date': b'20240701T192720Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA6ODUZ5F3JB7CA2H7/20240701/us-east-2/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=9d38955ad1ccd5d7d056fda33d5b7709f53732d64b5c504b5d755478517fa983', 'amz-sdk-invocation-id': b'7fae8607-05ed-4706-bbbe-7bcf1900d694', 'amz-sdk-request': b'attempt=1'}>
+[Time: 2024-07-01 13:27:20,779, File: httpsession.py:97, Function: get_cert_path] DEBUG - Certificate path: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/certifi/cacert.pem
+[Time: 2024-07-01 13:27:20,779, File: connectionpool.py:1055, Function: _new_conn] DEBUG - Starting new HTTPS connection (1): weatherapp-configuration.s3.us-east-2.amazonaws.com:443
+[Time: 2024-07-01 13:27:21,046, File: connectionpool.py:549, Function: _make_request] DEBUG - https://weatherapp-configuration.s3.us-east-2.amazonaws.com:443 "GET /configuration/None/configuration.json HTTP/1.1" 403 None
+[Time: 2024-07-01 13:27:21,046, File: parsers.py:240, Function: parse] DEBUG - Response headers: {'x-amz-request-id': 'YFX32G2E9XVQYB9D', 'x-amz-id-2': 'k3651zPhpFVpBXsQgqJvZiL31p5cbeuEau330NMNjbeQOXsMn16WAzkKyxaYjWuiQXdB1lMQoUottTAzXwWbWA==', 'Content-Type': 'application/xml', 'Transfer-Encoding': 'chunked', 'Date': 'Mon, 01 Jul 2024 19:27:20 GMT', 'Server': 'AmazonS3'}
+[Time: 2024-07-01 13:27:21,047, File: parsers.py:241, Function: parse] DEBUG - Response body:
+b'<?xml version="1.0" encoding="UTF-8"?>\n<Error><Code>AccessDenied</Code><Message>Access Denied</Message><RequestId>YFX32G2E9XVQYB9D</RequestId><HostId>k3651zPhpFVpBXsQgqJvZiL31p5cbeuEau330NMNjbeQOXsMn16WAzkKyxaYjWuiQXdB1lMQoUottTAzXwWbWA==</HostId></Error>'
+[Time: 2024-07-01 13:27:21,052, File: hooks.py:238, Function: _emit] DEBUG - Event needs-retry.s3.GetObject: calling handler <botocore.retryhandler.RetryHandler object at 0x10b7b0970>
+[Time: 2024-07-01 13:27:21,052, File: retryhandler.py:211, Function: __call__] DEBUG - No retry needed.
+[Time: 2024-07-01 13:27:21,052, File: hooks.py:238, Function: _emit] DEBUG - Event needs-retry.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x10b7b0a30>>
+[Time: 2024-07-01 13:27:48,372, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+[Time: 2024-07-01 13:27:48,373, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from before-call.apigateway to before-call.api-gateway
+[Time: 2024-07-01 13:27:48,373, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+[Time: 2024-07-01 13:27:48,374, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+[Time: 2024-07-01 13:27:48,374, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+[Time: 2024-07-01 13:27:48,374, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+[Time: 2024-07-01 13:27:48,374, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+[Time: 2024-07-01 13:27:48,375, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+[Time: 2024-07-01 13:27:48,375, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+[Time: 2024-07-01 13:27:48,375, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+[Time: 2024-07-01 13:27:48,375, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+[Time: 2024-07-01 13:27:48,377, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/endpoints.json
+[Time: 2024-07-01 13:27:48,384, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/sdk-default-configuration.json
+[Time: 2024-07-01 13:27:48,384, File: hooks.py:238, Function: _emit] DEBUG - Event choose-service-name: calling handler <function handle_service_name_alias at 0x101ecf7f0>
+[Time: 2024-07-01 13:27:48,398, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/s3/2006-03-01/service-2.json.gz
+[Time: 2024-07-01 13:27:48,413, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/s3/2006-03-01/endpoint-rule-set-1.json.gz
+[Time: 2024-07-01 13:27:48,416, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/partitions.json
+[Time: 2024-07-01 13:27:48,417, File: hooks.py:238, Function: _emit] DEBUG - Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x101e29510>
+[Time: 2024-07-01 13:27:48,417, File: hooks.py:238, Function: _emit] DEBUG - Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x100c6f130>
+[Time: 2024-07-01 13:27:48,432, File: hooks.py:238, Function: _emit] DEBUG - Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x101e292d0>
+[Time: 2024-07-01 13:27:48,432, File: configprovider.py:948, Function: provide] DEBUG - Looking for endpoint for s3 via: environment_service
+[Time: 2024-07-01 13:27:48,432, File: configprovider.py:948, Function: provide] DEBUG - Looking for endpoint for s3 via: environment_global
+[Time: 2024-07-01 13:27:48,432, File: configprovider.py:948, Function: provide] DEBUG - Looking for endpoint for s3 via: config_service
+[Time: 2024-07-01 13:27:48,433, File: configprovider.py:948, Function: provide] DEBUG - Looking for endpoint for s3 via: config_global
+[Time: 2024-07-01 13:27:48,433, File: configprovider.py:964, Function: provide] DEBUG - No configured endpoint found.
+[Time: 2024-07-01 13:27:48,459, File: endpoint.py:408, Function: create_endpoint] DEBUG - Setting s3 timeout as (60, 60)
+[Time: 2024-07-01 13:27:48,461, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/_retry.json
+[Time: 2024-07-01 13:27:48,461, File: client.py:285, Function: _register_legacy_retries] DEBUG - Registering retry handlers for service: s3
+[Time: 2024-07-01 13:27:48,461, File: utils.py:1721, Function: register] DEBUG - Registering S3 region redirector handler
+[Time: 2024-07-01 13:27:48,461, File: utils.py:1669, Function: register] DEBUG - Registering S3Express Identity Resolver
+[Time: 2024-07-01 13:27:48,461, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function sse_md5 at 0x101eed1b0>
+[Time: 2024-07-01 13:27:48,461, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function validate_bucket_name at 0x101eed120>
+[Time: 2024-07-01 13:27:48,462, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x101eeef80>
+[Time: 2024-07-01 13:27:48,462, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x1029aae90>>
+[Time: 2024-07-01 13:27:48,462, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x101f9e7a0>>
+[Time: 2024-07-01 13:27:48,462, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function generate_idempotent_uuid at 0x101eecf70>
+[Time: 2024-07-01 13:27:48,462, File: hooks.py:238, Function: _emit] DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x101eef130>
+[Time: 2024-07-01 13:27:48,462, File: hooks.py:238, Function: _emit] DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x1029aae90>>
+[Time: 2024-07-01 13:27:48,462, File: regions.py:498, Function: construct_endpoint] DEBUG - Calling endpoint provider with parameters: {'Bucket': 'weatherapp-configuration', 'Region': 'us-east-2', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'configuration/None/configuration.json', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+[Time: 2024-07-01 13:27:48,462, File: regions.py:513, Function: construct_endpoint] DEBUG - Endpoint provider result: https://weatherapp-configuration.s3.us-east-2.amazonaws.com
+[Time: 2024-07-01 13:27:48,462, File: regions.py:660, Function: auth_schemes_to_signing_ctx] DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+[Time: 2024-07-01 13:27:48,462, File: regions.py:733, Function: auth_schemes_to_signing_ctx] DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'us-east-2', 'signing_name': 's3', 'disableDoubleEncoding': True}
+[Time: 2024-07-01 13:27:48,463, File: hooks.py:238, Function: _emit] DEBUG - Event before-call.s3.GetObject: calling handler <function add_expect_header at 0x101eed480>
+[Time: 2024-07-01 13:27:48,463, File: hooks.py:238, Function: _emit] DEBUG - Event before-call.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x1029aaef0>>
+[Time: 2024-07-01 13:27:48,463, File: hooks.py:238, Function: _emit] DEBUG - Event before-call.s3.GetObject: calling handler <function add_recursion_detection_header at 0x101eecc10>
+[Time: 2024-07-01 13:27:48,463, File: hooks.py:238, Function: _emit] DEBUG - Event before-call.s3.GetObject: calling handler <function inject_api_version_header_if_needed at 0x101eee7a0>
+[Time: 2024-07-01 13:27:48,463, File: endpoint.py:114, Function: make_request] DEBUG - Making request for OperationModel(name=GetObject) with params: {'url_path': '/configuration/None/configuration.json', 'query_string': {}, 'method': 'GET', 'headers': {'User-Agent': 'Boto3/1.34.109 md/Botocore#1.34.109 ua/2.0 os/macos#22.3.0 md/arch#arm64 lang/python#3.10.1 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.109'}, 'body': b'', 'auth_path': '/weatherapp-configuration/configuration/None/configuration.json', 'url': 'https://weatherapp-configuration.s3.us-east-2.amazonaws.com/configuration/None/configuration.json', 'context': {'client_region': 'us-east-2', 'client_config': <botocore.config.Config object at 0x102907340>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'weatherapp-configuration', 'params': {'Bucket': 'weatherapp-configuration', 'Key': 'configuration/None/configuration.json'}}, 'input_params': {'Bucket': 'weatherapp-configuration', 'Key': 'configuration/None/configuration.json'}, 'signing': {'region': 'us-east-2', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'us-east-2'}]}}}
+[Time: 2024-07-01 13:27:48,463, File: hooks.py:238, Function: _emit] DEBUG - Event request-created.s3.GetObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x1027f8b50>>
+[Time: 2024-07-01 13:27:48,463, File: hooks.py:238, Function: _emit] DEBUG - Event choose-signer.s3.GetObject: calling handler <function set_operation_specific_signer at 0x101eece50>
+[Time: 2024-07-01 13:27:48,463, File: hooks.py:238, Function: _emit] DEBUG - Event before-sign.s3.GetObject: calling handler <function remove_arn_from_signing_path at 0x101eef0a0>
+[Time: 2024-07-01 13:27:48,463, File: hooks.py:238, Function: _emit] DEBUG - Event before-sign.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x1029aaef0>>
+[Time: 2024-07-01 13:27:48,463, File: auth.py:425, Function: add_auth] DEBUG - Calculating signature using v4 auth.
+[Time: 2024-07-01 13:27:48,463, File: auth.py:426, Function: add_auth] DEBUG - CanonicalRequest:
+GET
+/configuration/None/configuration.json
+
+host:weatherapp-configuration.s3.us-east-2.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240701T192748Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+[Time: 2024-07-01 13:27:48,463, File: auth.py:428, Function: add_auth] DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20240701T192748Z
+20240701/us-east-2/s3/aws4_request
+dcac7669416d0d00bf7f99b9f29cd2000e249b0cdecd8748aace34708a207492
+[Time: 2024-07-01 13:27:48,464, File: auth.py:430, Function: add_auth] DEBUG - Signature:
+606278f99a13316c5d241d405db80d92fa13acdd993c206d85e8387b5738e8e0
+[Time: 2024-07-01 13:27:48,464, File: hooks.py:238, Function: _emit] DEBUG - Event request-created.s3.GetObject: calling handler <function add_retry_headers at 0x101eeeef0>
+[Time: 2024-07-01 13:27:48,464, File: endpoint.py:265, Function: _do_get_response] DEBUG - Sending http request: <AWSPreparedRequest stream_output=True, method=GET, url=https://weatherapp-configuration.s3.us-east-2.amazonaws.com/configuration/None/configuration.json, headers={'User-Agent': b'Boto3/1.34.109 md/Botocore#1.34.109 ua/2.0 os/macos#22.3.0 md/arch#arm64 lang/python#3.10.1 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.109', 'X-Amz-Date': b'20240701T192748Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA6ODUZ5F3JB7CA2H7/20240701/us-east-2/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=606278f99a13316c5d241d405db80d92fa13acdd993c206d85e8387b5738e8e0', 'amz-sdk-invocation-id': b'43720993-dadd-4dd8-b783-cad1d15ca97b', 'amz-sdk-request': b'attempt=1'}>
+[Time: 2024-07-01 13:27:48,465, File: httpsession.py:97, Function: get_cert_path] DEBUG - Certificate path: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/certifi/cacert.pem
+[Time: 2024-07-01 13:27:48,465, File: connectionpool.py:1055, Function: _new_conn] DEBUG - Starting new HTTPS connection (1): weatherapp-configuration.s3.us-east-2.amazonaws.com:443
+[Time: 2024-07-01 13:27:48,689, File: connectionpool.py:549, Function: _make_request] DEBUG - https://weatherapp-configuration.s3.us-east-2.amazonaws.com:443 "GET /configuration/None/configuration.json HTTP/1.1" 403 None
+[Time: 2024-07-01 13:27:48,689, File: parsers.py:240, Function: parse] DEBUG - Response headers: {'x-amz-request-id': '9A2WBXQCR25PSYCG', 'x-amz-id-2': 'pmikhJLvJiIA9dgdR24eWX2e5ONGSzOSohicbEK7qSNfLQ2NtGsmhNz4ZQLkj6GLUp3c6orRPo+5WWGH3SeMai2fPBorFmJGMq9vaphUs+I=', 'Content-Type': 'application/xml', 'Transfer-Encoding': 'chunked', 'Date': 'Mon, 01 Jul 2024 19:27:48 GMT', 'Server': 'AmazonS3'}
+[Time: 2024-07-01 13:27:48,689, File: parsers.py:241, Function: parse] DEBUG - Response body:
+b'<?xml version="1.0" encoding="UTF-8"?>\n<Error><Code>AccessDenied</Code><Message>Access Denied</Message><RequestId>9A2WBXQCR25PSYCG</RequestId><HostId>pmikhJLvJiIA9dgdR24eWX2e5ONGSzOSohicbEK7qSNfLQ2NtGsmhNz4ZQLkj6GLUp3c6orRPo+5WWGH3SeMai2fPBorFmJGMq9vaphUs+I=</HostId></Error>'
+[Time: 2024-07-01 13:27:48,694, File: hooks.py:238, Function: _emit] DEBUG - Event needs-retry.s3.GetObject: calling handler <botocore.retryhandler.RetryHandler object at 0x1029aadd0>
+[Time: 2024-07-01 13:27:48,694, File: retryhandler.py:211, Function: __call__] DEBUG - No retry needed.
+[Time: 2024-07-01 13:27:48,694, File: hooks.py:238, Function: _emit] DEBUG - Event needs-retry.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x1029aae90>>
+[Time: 2024-07-01 13:28:51,644, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+[Time: 2024-07-01 13:28:51,645, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from before-call.apigateway to before-call.api-gateway
+[Time: 2024-07-01 13:28:51,645, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+[Time: 2024-07-01 13:28:51,646, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+[Time: 2024-07-01 13:28:51,646, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+[Time: 2024-07-01 13:28:51,646, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+[Time: 2024-07-01 13:28:51,647, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+[Time: 2024-07-01 13:28:51,648, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+[Time: 2024-07-01 13:28:51,648, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+[Time: 2024-07-01 13:28:51,648, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+[Time: 2024-07-01 13:28:51,648, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+[Time: 2024-07-01 13:28:51,650, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/endpoints.json
+[Time: 2024-07-01 13:28:51,656, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/sdk-default-configuration.json
+[Time: 2024-07-01 13:28:51,656, File: hooks.py:238, Function: _emit] DEBUG - Event choose-service-name: calling handler <function handle_service_name_alias at 0x1026777f0>
+[Time: 2024-07-01 13:28:51,688, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/s3/2006-03-01/service-2.json.gz
+[Time: 2024-07-01 13:28:51,700, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/s3/2006-03-01/endpoint-rule-set-1.json.gz
+[Time: 2024-07-01 13:28:51,703, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/partitions.json
+[Time: 2024-07-01 13:28:51,704, File: hooks.py:238, Function: _emit] DEBUG - Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x1025d1510>
+[Time: 2024-07-01 13:28:51,704, File: hooks.py:238, Function: _emit] DEBUG - Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x101417130>
+[Time: 2024-07-01 13:28:51,721, File: hooks.py:238, Function: _emit] DEBUG - Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x1025d12d0>
+[Time: 2024-07-01 13:28:51,721, File: configprovider.py:948, Function: provide] DEBUG - Looking for endpoint for s3 via: environment_service
+[Time: 2024-07-01 13:28:51,721, File: configprovider.py:948, Function: provide] DEBUG - Looking for endpoint for s3 via: environment_global
+[Time: 2024-07-01 13:28:51,721, File: configprovider.py:948, Function: provide] DEBUG - Looking for endpoint for s3 via: config_service
+[Time: 2024-07-01 13:28:51,721, File: configprovider.py:948, Function: provide] DEBUG - Looking for endpoint for s3 via: config_global
+[Time: 2024-07-01 13:28:51,722, File: configprovider.py:964, Function: provide] DEBUG - No configured endpoint found.
+[Time: 2024-07-01 13:28:51,764, File: endpoint.py:408, Function: create_endpoint] DEBUG - Setting s3 timeout as (60, 60)
+[Time: 2024-07-01 13:28:51,766, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/_retry.json
+[Time: 2024-07-01 13:28:51,766, File: client.py:285, Function: _register_legacy_retries] DEBUG - Registering retry handlers for service: s3
+[Time: 2024-07-01 13:28:51,766, File: utils.py:1721, Function: register] DEBUG - Registering S3 region redirector handler
+[Time: 2024-07-01 13:28:51,766, File: utils.py:1669, Function: register] DEBUG - Registering S3Express Identity Resolver
+[Time: 2024-07-01 13:28:51,767, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function sse_md5 at 0x1026951b0>
+[Time: 2024-07-01 13:28:51,767, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function validate_bucket_name at 0x102695120>
+[Time: 2024-07-01 13:28:51,767, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x102696f80>
+[Time: 2024-07-01 13:28:51,767, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x103152e60>>
+[Time: 2024-07-01 13:28:51,767, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x102746770>>
+[Time: 2024-07-01 13:28:51,767, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function generate_idempotent_uuid at 0x102694f70>
+[Time: 2024-07-01 13:28:51,767, File: hooks.py:238, Function: _emit] DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x102697130>
+[Time: 2024-07-01 13:28:51,767, File: hooks.py:238, Function: _emit] DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x103152e60>>
+[Time: 2024-07-01 13:28:51,767, File: regions.py:498, Function: construct_endpoint] DEBUG - Calling endpoint provider with parameters: {'Bucket': 'weatherapp-configuration', 'Region': 'us-east-2', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'configuration/None/configuration.json', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+[Time: 2024-07-01 13:28:51,768, File: regions.py:513, Function: construct_endpoint] DEBUG - Endpoint provider result: https://weatherapp-configuration.s3.us-east-2.amazonaws.com
+[Time: 2024-07-01 13:28:51,768, File: regions.py:660, Function: auth_schemes_to_signing_ctx] DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+[Time: 2024-07-01 13:28:51,768, File: regions.py:733, Function: auth_schemes_to_signing_ctx] DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'us-east-2', 'signing_name': 's3', 'disableDoubleEncoding': True}
+[Time: 2024-07-01 13:28:51,768, File: hooks.py:238, Function: _emit] DEBUG - Event before-call.s3.GetObject: calling handler <function add_expect_header at 0x102695480>
+[Time: 2024-07-01 13:28:51,768, File: hooks.py:238, Function: _emit] DEBUG - Event before-call.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x103152ec0>>
+[Time: 2024-07-01 13:28:51,768, File: hooks.py:238, Function: _emit] DEBUG - Event before-call.s3.GetObject: calling handler <function add_recursion_detection_header at 0x102694c10>
+[Time: 2024-07-01 13:28:51,768, File: hooks.py:238, Function: _emit] DEBUG - Event before-call.s3.GetObject: calling handler <function inject_api_version_header_if_needed at 0x1026967a0>
+[Time: 2024-07-01 13:28:51,768, File: endpoint.py:114, Function: make_request] DEBUG - Making request for OperationModel(name=GetObject) with params: {'url_path': '/configuration/None/configuration.json', 'query_string': {}, 'method': 'GET', 'headers': {'User-Agent': 'Boto3/1.34.109 md/Botocore#1.34.109 ua/2.0 os/macos#22.3.0 md/arch#arm64 lang/python#3.10.1 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.109'}, 'body': b'', 'auth_path': '/weatherapp-configuration/configuration/None/configuration.json', 'url': 'https://weatherapp-configuration.s3.us-east-2.amazonaws.com/configuration/None/configuration.json', 'context': {'client_region': 'us-east-2', 'client_config': <botocore.config.Config object at 0x1030ab310>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'weatherapp-configuration', 'params': {'Bucket': 'weatherapp-configuration', 'Key': 'configuration/None/configuration.json'}}, 'input_params': {'Bucket': 'weatherapp-configuration', 'Key': 'configuration/None/configuration.json'}, 'signing': {'region': 'us-east-2', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'us-east-2'}]}}}
+[Time: 2024-07-01 13:28:51,768, File: hooks.py:238, Function: _emit] DEBUG - Event request-created.s3.GetObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x102fa0b20>>
+[Time: 2024-07-01 13:28:51,768, File: hooks.py:238, Function: _emit] DEBUG - Event choose-signer.s3.GetObject: calling handler <function set_operation_specific_signer at 0x102694e50>
+[Time: 2024-07-01 13:28:51,769, File: hooks.py:238, Function: _emit] DEBUG - Event before-sign.s3.GetObject: calling handler <function remove_arn_from_signing_path at 0x1026970a0>
+[Time: 2024-07-01 13:28:51,769, File: hooks.py:238, Function: _emit] DEBUG - Event before-sign.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x103152ec0>>
+[Time: 2024-07-01 13:28:51,769, File: auth.py:425, Function: add_auth] DEBUG - Calculating signature using v4 auth.
+[Time: 2024-07-01 13:28:51,769, File: auth.py:426, Function: add_auth] DEBUG - CanonicalRequest:
+GET
+/configuration/None/configuration.json
+
+host:weatherapp-configuration.s3.us-east-2.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240701T192851Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+[Time: 2024-07-01 13:28:51,769, File: auth.py:428, Function: add_auth] DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20240701T192851Z
+20240701/us-east-2/s3/aws4_request
+870b37092421bcb2e53a8b15443de79924936c1a5c5dd0cf521c1484e5b412ea
+[Time: 2024-07-01 13:28:51,769, File: auth.py:430, Function: add_auth] DEBUG - Signature:
+cfa92e52e5e6857d12e999fbb18046428db3194d1d52b22872b194343ca4d79b
+[Time: 2024-07-01 13:28:51,769, File: hooks.py:238, Function: _emit] DEBUG - Event request-created.s3.GetObject: calling handler <function add_retry_headers at 0x102696ef0>
+[Time: 2024-07-01 13:28:51,769, File: endpoint.py:265, Function: _do_get_response] DEBUG - Sending http request: <AWSPreparedRequest stream_output=True, method=GET, url=https://weatherapp-configuration.s3.us-east-2.amazonaws.com/configuration/None/configuration.json, headers={'User-Agent': b'Boto3/1.34.109 md/Botocore#1.34.109 ua/2.0 os/macos#22.3.0 md/arch#arm64 lang/python#3.10.1 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.109', 'X-Amz-Date': b'20240701T192851Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA6ODUZ5F3JB7CA2H7/20240701/us-east-2/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=cfa92e52e5e6857d12e999fbb18046428db3194d1d52b22872b194343ca4d79b', 'amz-sdk-invocation-id': b'b4a7186d-f72e-4a1c-a76f-32de3c0c55eb', 'amz-sdk-request': b'attempt=1'}>
+[Time: 2024-07-01 13:28:51,771, File: httpsession.py:97, Function: get_cert_path] DEBUG - Certificate path: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/certifi/cacert.pem
+[Time: 2024-07-01 13:28:51,771, File: connectionpool.py:1055, Function: _new_conn] DEBUG - Starting new HTTPS connection (1): weatherapp-configuration.s3.us-east-2.amazonaws.com:443
+[Time: 2024-07-01 13:28:52,004, File: connectionpool.py:549, Function: _make_request] DEBUG - https://weatherapp-configuration.s3.us-east-2.amazonaws.com:443 "GET /configuration/None/configuration.json HTTP/1.1" 403 None
+[Time: 2024-07-01 13:28:52,005, File: parsers.py:240, Function: parse] DEBUG - Response headers: {'x-amz-request-id': 'VRBYJEVP25WESJJJ', 'x-amz-id-2': 'jl7IhgjP2+i+OFAxIEbsobCWwZIRMJml94vuqS/c5QQKevATkX8B2t3k2H2Z6mjqW1YcBAyrDvYFnCyzDH7WDw==', 'Content-Type': 'application/xml', 'Transfer-Encoding': 'chunked', 'Date': 'Mon, 01 Jul 2024 19:28:51 GMT', 'Server': 'AmazonS3'}
+[Time: 2024-07-01 13:28:52,005, File: parsers.py:241, Function: parse] DEBUG - Response body:
+b'<?xml version="1.0" encoding="UTF-8"?>\n<Error><Code>AccessDenied</Code><Message>Access Denied</Message><RequestId>VRBYJEVP25WESJJJ</RequestId><HostId>jl7IhgjP2+i+OFAxIEbsobCWwZIRMJml94vuqS/c5QQKevATkX8B2t3k2H2Z6mjqW1YcBAyrDvYFnCyzDH7WDw==</HostId></Error>'
+[Time: 2024-07-01 13:28:52,010, File: hooks.py:238, Function: _emit] DEBUG - Event needs-retry.s3.GetObject: calling handler <botocore.retryhandler.RetryHandler object at 0x103152da0>
+[Time: 2024-07-01 13:28:52,010, File: retryhandler.py:211, Function: __call__] DEBUG - No retry needed.
+[Time: 2024-07-01 13:28:52,010, File: hooks.py:238, Function: _emit] DEBUG - Event needs-retry.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x103152e60>>
+[Time: 2024-07-01 13:29:55,020, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+[Time: 2024-07-01 13:29:55,024, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from before-call.apigateway to before-call.api-gateway
+[Time: 2024-07-01 13:29:55,026, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+[Time: 2024-07-01 13:29:55,028, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+[Time: 2024-07-01 13:29:55,028, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+[Time: 2024-07-01 13:29:55,028, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+[Time: 2024-07-01 13:29:55,029, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+[Time: 2024-07-01 13:29:55,032, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+[Time: 2024-07-01 13:29:55,032, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+[Time: 2024-07-01 13:29:55,033, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+[Time: 2024-07-01 13:29:55,033, File: hooks.py:482, Function: _alias_event_name] DEBUG - Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+[Time: 2024-07-01 13:29:55,037, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/endpoints.json
+[Time: 2024-07-01 13:29:55,050, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/sdk-default-configuration.json
+[Time: 2024-07-01 13:29:55,050, File: hooks.py:238, Function: _emit] DEBUG - Event choose-service-name: calling handler <function handle_service_name_alias at 0x101fb37f0>
+[Time: 2024-07-01 13:29:55,088, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/s3/2006-03-01/service-2.json.gz
+[Time: 2024-07-01 13:29:55,103, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/s3/2006-03-01/endpoint-rule-set-1.json.gz
+[Time: 2024-07-01 13:29:55,106, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/partitions.json
+[Time: 2024-07-01 13:29:55,107, File: hooks.py:238, Function: _emit] DEBUG - Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x101f0d510>
+[Time: 2024-07-01 13:29:55,107, File: hooks.py:238, Function: _emit] DEBUG - Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x100d53130>
+[Time: 2024-07-01 13:29:55,126, File: hooks.py:238, Function: _emit] DEBUG - Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x101f0d2d0>
+[Time: 2024-07-01 13:29:55,127, File: configprovider.py:948, Function: provide] DEBUG - Looking for endpoint for s3 via: environment_service
+[Time: 2024-07-01 13:29:55,127, File: configprovider.py:948, Function: provide] DEBUG - Looking for endpoint for s3 via: environment_global
+[Time: 2024-07-01 13:29:55,127, File: configprovider.py:948, Function: provide] DEBUG - Looking for endpoint for s3 via: config_service
+[Time: 2024-07-01 13:29:55,127, File: configprovider.py:948, Function: provide] DEBUG - Looking for endpoint for s3 via: config_global
+[Time: 2024-07-01 13:29:55,127, File: configprovider.py:964, Function: provide] DEBUG - No configured endpoint found.
+[Time: 2024-07-01 13:29:55,177, File: endpoint.py:408, Function: create_endpoint] DEBUG - Setting s3 timeout as (60, 60)
+[Time: 2024-07-01 13:29:55,180, File: loaders.py:180, Function: _load_file] DEBUG - Loading JSON file: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/botocore/data/_retry.json
+[Time: 2024-07-01 13:29:55,180, File: client.py:285, Function: _register_legacy_retries] DEBUG - Registering retry handlers for service: s3
+[Time: 2024-07-01 13:29:55,180, File: utils.py:1721, Function: register] DEBUG - Registering S3 region redirector handler
+[Time: 2024-07-01 13:29:55,180, File: utils.py:1669, Function: register] DEBUG - Registering S3Express Identity Resolver
+[Time: 2024-07-01 13:29:55,180, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function sse_md5 at 0x101fd11b0>
+[Time: 2024-07-01 13:29:55,180, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function validate_bucket_name at 0x101fd1120>
+[Time: 2024-07-01 13:29:55,181, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x101fd2f80>
+[Time: 2024-07-01 13:29:55,181, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x102a8eec0>>
+[Time: 2024-07-01 13:29:55,181, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x1020827d0>>
+[Time: 2024-07-01 13:29:55,181, File: hooks.py:238, Function: _emit] DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function generate_idempotent_uuid at 0x101fd0f70>
+[Time: 2024-07-01 13:29:55,181, File: hooks.py:238, Function: _emit] DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x101fd3130>
+[Time: 2024-07-01 13:29:55,181, File: hooks.py:238, Function: _emit] DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x102a8eec0>>
+[Time: 2024-07-01 13:29:55,181, File: regions.py:498, Function: construct_endpoint] DEBUG - Calling endpoint provider with parameters: {'Bucket': 'weatherapp-configuration', 'Region': 'us-east-2', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'configuration/None/configuration.json', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+[Time: 2024-07-01 13:29:55,181, File: regions.py:513, Function: construct_endpoint] DEBUG - Endpoint provider result: https://weatherapp-configuration.s3.us-east-2.amazonaws.com
+[Time: 2024-07-01 13:29:55,181, File: regions.py:660, Function: auth_schemes_to_signing_ctx] DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+[Time: 2024-07-01 13:29:55,181, File: regions.py:733, Function: auth_schemes_to_signing_ctx] DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'us-east-2', 'signing_name': 's3', 'disableDoubleEncoding': True}
+[Time: 2024-07-01 13:29:55,182, File: hooks.py:238, Function: _emit] DEBUG - Event before-call.s3.GetObject: calling handler <function add_expect_header at 0x101fd1480>
+[Time: 2024-07-01 13:29:55,182, File: hooks.py:238, Function: _emit] DEBUG - Event before-call.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x102a8ef20>>
+[Time: 2024-07-01 13:29:55,182, File: hooks.py:238, Function: _emit] DEBUG - Event before-call.s3.GetObject: calling handler <function add_recursion_detection_header at 0x101fd0c10>
+[Time: 2024-07-01 13:29:55,182, File: hooks.py:238, Function: _emit] DEBUG - Event before-call.s3.GetObject: calling handler <function inject_api_version_header_if_needed at 0x101fd27a0>
+[Time: 2024-07-01 13:29:55,182, File: endpoint.py:114, Function: make_request] DEBUG - Making request for OperationModel(name=GetObject) with params: {'url_path': '/configuration/None/configuration.json', 'query_string': {}, 'method': 'GET', 'headers': {'User-Agent': 'Boto3/1.34.109 md/Botocore#1.34.109 ua/2.0 os/macos#22.3.0 md/arch#arm64 lang/python#3.10.1 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.109'}, 'body': b'', 'auth_path': '/weatherapp-configuration/configuration/None/configuration.json', 'url': 'https://weatherapp-configuration.s3.us-east-2.amazonaws.com/configuration/None/configuration.json', 'context': {'client_region': 'us-east-2', 'client_config': <botocore.config.Config object at 0x1029eb370>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'weatherapp-configuration', 'params': {'Bucket': 'weatherapp-configuration', 'Key': 'configuration/None/configuration.json'}}, 'input_params': {'Bucket': 'weatherapp-configuration', 'Key': 'configuration/None/configuration.json'}, 'signing': {'region': 'us-east-2', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'us-east-2'}]}}}
+[Time: 2024-07-01 13:29:55,182, File: hooks.py:238, Function: _emit] DEBUG - Event request-created.s3.GetObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x1028e0b80>>
+[Time: 2024-07-01 13:29:55,182, File: hooks.py:238, Function: _emit] DEBUG - Event choose-signer.s3.GetObject: calling handler <function set_operation_specific_signer at 0x101fd0e50>
+[Time: 2024-07-01 13:29:55,182, File: hooks.py:238, Function: _emit] DEBUG - Event before-sign.s3.GetObject: calling handler <function remove_arn_from_signing_path at 0x101fd30a0>
+[Time: 2024-07-01 13:29:55,182, File: hooks.py:238, Function: _emit] DEBUG - Event before-sign.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x102a8ef20>>
+[Time: 2024-07-01 13:29:55,183, File: auth.py:425, Function: add_auth] DEBUG - Calculating signature using v4 auth.
+[Time: 2024-07-01 13:29:55,183, File: auth.py:426, Function: add_auth] DEBUG - CanonicalRequest:
+GET
+/configuration/None/configuration.json
+
+host:weatherapp-configuration.s3.us-east-2.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240701T192955Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+[Time: 2024-07-01 13:29:55,183, File: auth.py:428, Function: add_auth] DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20240701T192955Z
+20240701/us-east-2/s3/aws4_request
+789904461f1232dcdcc8c0002a72cff79f0406cf3fffc24716a831db427cea88
+[Time: 2024-07-01 13:29:55,183, File: auth.py:430, Function: add_auth] DEBUG - Signature:
+dea9511c82cb69789675acf94117a4aa3959099b3138d6942ad10e182e9ed186
+[Time: 2024-07-01 13:29:55,183, File: hooks.py:238, Function: _emit] DEBUG - Event request-created.s3.GetObject: calling handler <function add_retry_headers at 0x101fd2ef0>
+[Time: 2024-07-01 13:29:55,183, File: endpoint.py:265, Function: _do_get_response] DEBUG - Sending http request: <AWSPreparedRequest stream_output=True, method=GET, url=https://weatherapp-configuration.s3.us-east-2.amazonaws.com/configuration/None/configuration.json, headers={'User-Agent': b'Boto3/1.34.109 md/Botocore#1.34.109 ua/2.0 os/macos#22.3.0 md/arch#arm64 lang/python#3.10.1 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.109', 'X-Amz-Date': b'20240701T192955Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA6ODUZ5F3JB7CA2H7/20240701/us-east-2/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=dea9511c82cb69789675acf94117a4aa3959099b3138d6942ad10e182e9ed186', 'amz-sdk-invocation-id': b'a6553262-b80b-440a-8b24-51b029ef38b5', 'amz-sdk-request': b'attempt=1'}>
+[Time: 2024-07-01 13:29:55,185, File: httpsession.py:97, Function: get_cert_path] DEBUG - Certificate path: /Users/ybernstein/repos/trans/lib/python3.10/site-packages/certifi/cacert.pem
+[Time: 2024-07-01 13:29:55,185, File: connectionpool.py:1055, Function: _new_conn] DEBUG - Starting new HTTPS connection (1): weatherapp-configuration.s3.us-east-2.amazonaws.com:443
+[Time: 2024-07-01 13:29:55,430, File: connectionpool.py:549, Function: _make_request] DEBUG - https://weatherapp-configuration.s3.us-east-2.amazonaws.com:443 "GET /configuration/None/configuration.json HTTP/1.1" 403 None
+[Time: 2024-07-01 13:29:55,431, File: parsers.py:240, Function: parse] DEBUG - Response headers: {'x-amz-request-id': 'QTD4QYA0XE3MWVDG', 'x-amz-id-2': 'eIg0KhFhU+Qh9aTnmaWXpxx1D8GMgpWDvBi/M1k8P8cWui1tM/AXE2C5yy3LmHPcERlE0kQH7zM=', 'Content-Type': 'application/xml', 'Transfer-Encoding': 'chunked', 'Date': 'Mon, 01 Jul 2024 19:29:55 GMT', 'Server': 'AmazonS3'}
+[Time: 2024-07-01 13:29:55,431, File: parsers.py:241, Function: parse] DEBUG - Response body:
+b'<?xml version="1.0" encoding="UTF-8"?>\n<Error><Code>AccessDenied</Code><Message>Access Denied</Message><RequestId>QTD4QYA0XE3MWVDG</RequestId><HostId>eIg0KhFhU+Qh9aTnmaWXpxx1D8GMgpWDvBi/M1k8P8cWui1tM/AXE2C5yy3LmHPcERlE0kQH7zM=</HostId></Error>'
+[Time: 2024-07-01 13:29:55,437, File: hooks.py:238, Function: _emit] DEBUG - Event needs-retry.s3.GetObject: calling handler <botocore.retryhandler.RetryHandler object at 0x102a8ee00>
+[Time: 2024-07-01 13:29:55,437, File: retryhandler.py:211, Function: __call__] DEBUG - No retry needed.
+[Time: 2024-07-01 13:29:55,437, File: hooks.py:238, Function: _emit] DEBUG - Event needs-retry.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x102a8eec0>>

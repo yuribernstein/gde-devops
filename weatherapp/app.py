@@ -6,7 +6,11 @@ import requests
 import config as cfg
 import os
 import json
+from logs import logger
 config = cfg.get_config()
+
+logger.info(f'Configuration loaded from S3: {config}')
+
 
 app = Flask(__name__)
 

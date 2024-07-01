@@ -1,10 +1,8 @@
 import logging
 import sys
-import config as cfg
-config = cfg.get_config()
 
-log_level = config['logging']['log_level'].upper()
-log_file = config['logging']['log_file']
+log_level = 'DEBUG'
+log_file = 'weatherapp.log'
 
 
 if log_level == 'DEBUG':
