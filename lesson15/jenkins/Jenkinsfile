@@ -1,0 +1,100 @@
+pipeline {
+    agent any
+    environment {
+        DOCKER_IMAGE = 'yuribernstein/advisor'
+        AWS_ACCESS_KEY = '' 
+        AWS_SECRET_KEY = ''
+    }
+    stages {
+        stage('Check for PR and Set Environment') {
+            steps {
+                script {
+                    // Fetch the list of open pull requests
+                    def pullRequests = sh(script: "curl 'https://api.github.com/repos/yuribernstein/gde-devops/pulls?state=open'", returnStdout: true).trim()
+                    // echo "API Response: ${pullRequests}"
+                    if (pullRequests == '[]') {
+                        currentBuild.result = 'SUCCESS'
+                        error('No open pull requests')
+                    } else {
+                        // Parse the JSON response to get the PR branch and the latest commit hash
+                        def prData = readJSON text: pullRequests
+                        if (prData.size() > 0 && prData[0].head) {
+                            def prBranch = prData[0].head.ref
+                            def latestCommit = prData[0].head.sha
+
+                            // Set environment variables for later stages
+                            env.PR_BRANCH = prBranch
+                            env.LATEST_COMMIT = latestCommit
+                            echo "PR Branch: ${env.PR_BRANCH}"
+                            echo "Latest Commit: ${env.LATEST_COMMIT}"
+                        } else {
+                            error('Unexpected API response format or content')
+                        }
+                    }
+                }
+            }
+        }
+        stage('Checkout PR Branch') {
+            steps {
+                script {
+                    checkout([$class: 'GitSCM', branches: [[name: "*/${env.PR_BRANCH}"]],
+                              userRemoteConfigs: [[url: 'https://github.com/yuribernstein/gde-devops.git']]])
+                }
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
+                dir('weatherapp') {
+                    script {
+                        // Build Docker image with the tag as the latest commit hash
+                        sh "docker build -t ${DOCKER_IMAGE}:${env.LATEST_COMMIT} ."
+                        sh "docker push ${DOCKER_IMAGE}:${env.LATEST_COMMIT}"
+                    }
+                }
+            }
+        }
+        stage('Deploy to Test Cluster') {
+            steps {
+                dir('deployment') {
+                    script {
+                        // prepare the deployment file
+                        sh "python3 generator.py --image_tag=${env.LATEST_COMMIT} --output=deployment.yaml --env=test --aws_access_key=${env.AWS_ACCESS_KEY} --aws_secret_key=${env.AWS_SECRET_KEY}"
+                        // Deploying to Kubernetes Test Cluster
+                        sh 'kubectl config use-context test'
+                        sh "kubectl apply -f deployment.yaml"
+                    }
+                }
+            }
+        }
+        stage('Run Tests') {
+            steps {
+                script {
+                    // Tests mock
+                    sh 'echo "Tests passed"'    
+                }
+            }
+        }
+        stage('Tag and Push Docker Image') {
+            steps {
+                script {
+                    // Tagging the image with a version equal to PR branch name and pushing to DockerHub
+                    sh "docker tag ${DOCKER_IMAGE}:${env.LATEST_COMMIT} ${DOCKER_IMAGE}:${env.PR_BRANCH}"
+                    sh "docker push ${DOCKER_IMAGE}:${env.PR_BRANCH}"
+                }
+            }
+        }
+        stage('Deploy to Production') {
+            steps {
+                dir('deployment') {
+                    script {
+                        // prepare the deployment file
+                        sh "python3 generator.py --image_tag=${env.PR_BRANCH} --output=deployment.yaml --env=production --aws_access_key=${env.AWS_ACCESS_KEY} --aws_secret_key=${env.AWS_SECRET_KEY}"
+                        // Deploying to Kubernetes Production Cluster
+                        sh 'kubectl config use-context prod'
+                        sh 'kubectl apply -f deployment.yaml'
+                    }
+                }
+            }
+        }
+    }
+}

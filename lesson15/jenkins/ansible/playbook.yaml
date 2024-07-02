@@ -1,0 +1,122 @@
+---
+- name: Install Jenkins and configure on an Ubuntu server
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install Java OpenJDK 11
+      apt:
+        name: openjdk-11-jdk
+        state: present
+
+    - name: Add Jenkins repository and GPG key
+      shell: |
+        sudo wget -O /usr/share/keyrings/jenkins-keyring.asc https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+        echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+    - name: Install Jenkins
+      apt:
+        name: jenkins
+        state: present
+        update_cache: yes
+
+    - name: Start and enable Jenkins service
+      systemd:
+        name: jenkins
+        state: started
+        enabled: yes
+
+    - name: Install Docker.io
+      apt:
+        name: docker.io
+        state: latest
+
+    - name: Add Kubernetes community GPG key
+      become: yes
+      ansible.builtin.get_url:
+        url: https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key
+        dest: /tmp/kubernetes.gpg
+        mode: '0644'
+      register: download_gpg
+
+    - name: De-armoring GPG key
+      become: yes
+      command: gpg --dearmor -o /etc/apt/keyrings/kubernetes.gpg /tmp/kubernetes.gpg
+      when: download_gpg is changed
+
+    - name: Add Kubernetes APT repository
+      become: yes
+      apt_repository:
+        repo: "deb [signed-by=/etc/apt/keyrings/kubernetes.gpg] https://pkgs.k8s.io/core:/stable:/v1.28/deb /"
+        state: present
+        filename: kubernetes
+
+
+    - name: Update package listings and install kubectl
+      apt:
+        name:
+          - kubectl
+        update_cache: yes
+        state: latest
+
+    - name: Ensure .kube directory exists for Jenkins
+      file:
+        path: "/var/lib/jenkins/.kube"
+        state: directory
+        owner: jenkins
+        group: jenkins
+
+    - name: Copy kubeconfig to Jenkins home
+      copy:
+        src: "{{ playbook_dir }}/kubeconfig"
+        dest: "/var/lib/jenkins/.kube/config"
+        owner: jenkins
+        group: jenkins
+        mode: '0644'
+      
+    - name: copy kubeconfig to root and ubuntu users
+      shell: |
+      mkdir -p /root/.kube
+      mkdir -p /home/ubuntu/.kube
+      cp /var/lib/jenkins/.kube/config /root/.kube/config
+      cp /var/lib/jenkins/.kube/config /home/ubuntu/.kube/config
+
+    - name: Configure firewall for Jenkins ports
+      ufw:
+        rule: allow
+        port: "{{ item }}"
+        proto: tcp
+      with_items:
+        - 443
+        - 8080
+
+    - name: Install python3-pip and jinja2
+      apt:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - python3-pip
+        - python3-jinja2
+
+    - name: Allow jenkins user to run docker commands
+      command: usermod -aG docker jenkins
+
+    - name: Get initial Jenkins password
+      command: cat /var/lib/jenkins/secrets/initialAdminPassword
+      register: jenkins_password
+
+    - name: Print Jenkins initial password
+      debug:
+        msg: "Jenkins initial password is {{ jenkins_password.stdout }}"
+
+  handlers:
+    - name: restart jenkins
+      systemd:
+        name: jenkins
+        state: restarted
+
+

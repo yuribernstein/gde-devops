@@ -1,0 +1,53 @@
+{
+    "prod": {
+        "weather_api" :
+        {
+            "url" : "https://us-weather-by-zip-code.p.rapidapi.com/getweatherzipcode",
+            "rapidapi_key" : "",
+            "rapidapi_host" : "us-weather-by-zip-code.p.rapidapi.com"
+        },
+        "logging":{
+            "log_level" : "INFO",
+            "log_file" : "weather.log"
+        },
+        "db": {
+            "host": "weatherapp-db.crsg4y6qafeu.us-east-2.rds.amazonaws.com",
+            "user": "weatherapp",
+            "password": "Passw0rd",
+            "database": "waprod"
+        },
+        "suggestion_app": "http://localhost:8081"
+    },
+    "dev" : {
+        "weather_api" :
+        {
+            "url" : "https://us-weather-by-zip-code.p.rapidapi.com/getweatherzipcode",
+            "rapidapi_key" : "",
+            "rapidapi_host" : "us-weather-by-zip-code.p.rapidapi.com"
+        },
+        "logging":{
+            "log_level" : "DEBUG",
+            "log_file" : "weather.log"
+        },
+        "suggestion_app": "http://localhost:8081"
+    },
+    "testing" : {
+        "weather_api" :
+        {
+            "url" : "https://us-weather-by-zip-code.p.rapidapi.com/getweatherzipcode",
+            "rapidapi_key" : "",
+            "rapidapi_host" : "us-weather-by-zip-code.p.rapidapi.com"
+        },
+        "logging":{
+            "log_level" : "DEBUG",
+            "log_file" : "weather.log"
+        },
+        "db": {
+            "host": "weatherapp-db.crsg4y6qafeu.us-east-2.rds.amazonaws.com",
+            "user": "weatherapp",
+            "password": "Passw0rd",
+            "database": "waprod"
+        },
+        "suggestion_app": "http://localhost:8081"
+    }
+}

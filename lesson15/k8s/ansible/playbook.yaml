@@ -1,0 +1,239 @@
+---
+- name: Deploy Kubernetes Cluster
+  hosts: all
+  become: yes
+  tasks:
+    - name: Update and install prerequisites
+      apt:
+        name:
+          - apt-transport-https
+          - curl
+          - socat
+          - conntrack
+        update_cache: yes
+        state: latest
+
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: latest
+
+    - name: Start and enable Docker service
+      systemd:
+        name: docker
+        enabled: yes
+        state: started
+
+    - name: Add Kubernetes community GPG key
+      become: yes
+      ansible.builtin.get_url:
+        url: https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key
+        dest: /tmp/kubernetes.gpg
+        mode: '0644'
+      register: download_gpg
+
+    - name: De-armoring GPG key
+      become: yes
+      command: gpg --dearmor -o /etc/apt/keyrings/kubernetes.gpg /tmp/kubernetes.gpg
+      when: download_gpg is changed
+
+
+    - name: Add Kubernetes APT repository
+      become: yes
+      apt_repository:
+        repo: "deb [signed-by=/etc/apt/keyrings/kubernetes.gpg] https://pkgs.k8s.io/core:/stable:/v1.28/deb /"
+        state: present
+        filename: kubernetes
+
+
+    - name: Update package listings and install Kubernetes components
+      apt:
+        name:
+          - kubelet
+          - kubeadm
+          - kubectl
+        update_cache: yes
+        state: latest
+
+    - name: Hold Kubernetes packages
+      ansible.builtin.dpkg_selections:
+        name: "{{ item }}"
+        selection: hold #means that the package will not be upgraded
+      loop:
+        - kubelet
+        - kubeadm
+        - kubectl
+
+    - name: Disable swap
+      command: swapoff -a
+      ignore_errors: true
+
+    - name: Remove swap from fstab
+      lineinfile:
+        path: /etc/fstab
+        regexp: '^.* swap .*'
+        line: '# commented out by Ansible to disable swap'
+        state: present
+
+    - name: Configure sysctl settings for Kubernetes
+      copy:
+        dest: /etc/sysctl.d/k8s.conf
+        content: |
+          net.bridge.bridge-nf-call-ip6tables = 1
+          net.bridge.bridge-nf-call-iptables = 1
+      notify: reload sysctl
+
+    - name: Enable and start kubelet service
+      systemd:
+        name: kubelet
+        enabled: yes
+        state: started
+
+    - name: Configure firewall for necessary Kubernetes ports
+      ufw:
+        rule: allow
+        port: "{{ item }}"
+        proto: tcp
+      with_items:
+        - 6443    # Kubernetes API server
+        - 2379:2380 # etcd server client API
+        - 10250   # Kubelet API
+        - 10255   # Read-only Kubelet API (optional)
+      when: inventory_hostname in groups['control_plane']
+
+    - name: Open additional required ports for networking
+      ufw:
+        rule: allow
+        port: "{{ item }}"
+        proto: "{{ 'tcp' if item != '8472' else 'udp' }}"
+      with_items:
+        - 8472    # Overlay Network (UDP, flannel VXLAN if using flannel)
+      when: inventory_hostname in groups['control_plane']
+
+    - name: Reload UFW
+      command: ufw reload
+      when: inventory_hostname in groups['control_plane']
+
+  handlers:
+    - name: reload sysctl
+      command: sysctl --system
+
+- name: Initialize Kubernetes control plane
+  hosts: role_control_plane
+  become: yes
+  tasks:
+    - name: Rename the hostname
+      hostname:
+        name: control_plane
+      become: yes
+
+    - name: Initialize the Kubernetes control plane
+      command: kubeadm init --pod-network-cidr=10.244.0.0/16
+      register: kubeadm_init
+      run_once: true
+
+    - name: Save kubeadm join command to local file
+      local_action:
+        module: shell
+        cmd: "echo '{{ kubeadm_init.stdout }}' | grep -A 2 'kubeadm join' | tr -d '\\n' | sed 's/\\\\//g' > join_command.sh"
+      run_once: true
+      delegate_to: localhost
+      become: no
+
+    - name: Set up kubectl for root
+      command: "{{ item }}"
+      with_items:
+        - mkdir -p /root/.kube
+        - cp -i /etc/kubernetes/admin.conf /root/.kube/config
+        - chown root:root /root/.kube/config
+      run_once: true
+
+    - name: Install Flannel CNI plugin
+      command: kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+      when: inventory_hostname in groups['control_plane']
+      run_once: true
+
+    - name: Fetch kubeconfig for local user
+      fetch:
+        src: /etc/kubernetes/admin.conf
+        dest: "./configs/cluster-kubeconfig"
+        flat: yes
+      run_once: true
+       
+
+- name: Set up Kubernetes worker nodes
+  hosts: role_worker
+  tasks:
+    - name: Rename the hostname
+      hostname:
+        name: "{{ inventory_hostname }}"
+      become: yes
+
+    - name: Ensure the join command script is present and correct
+      local_action:
+        module: stat
+        path: "./join_command.sh"
+      register: script_stat
+      run_once: true
+
+    - name: Copy kubeadm join command to worker nodes
+      copy:
+        src: "./join_command.sh"
+        dest: "/tmp/join_command.sh"
+        mode: '0755'
+      run_once: true
+      when: script_stat.stat.exists
+
+    - name: Join cluster
+      command: bash /tmp/join_command.sh
+      args:
+        executable: /bin/bash
+      become: yes
+      run_once: true
+      when: script_stat.stat.exists
+
+
+- name: Install k8s dashboard
+  hosts: role_control_plane
+  tasks:
+    - name: Download helm installation script
+      command: curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+      args:
+        chdir: /tmp
+      become: yes
+
+    - name: Make helm installation script executable
+      command: chmod 700 get_helm.sh
+      args:
+        chdir: /tmp
+      become: yes
+
+    - name: Install helm
+      command: ./get_helm.sh
+      args:
+        chdir: /tmp
+      become: yes
+
+    - name: Add GDE DevOps Helm repository
+      command: helm repo add gde-devops https://yuribernstein.github.io/gde-devops/
+      become: yes
+
+    - name: Update Helm repositories
+      command: helm repo update
+      become: yes
+
+    - name: Install Kubernetes dashboard
+      command: helm install k8s-dashboard gde-devops/k8s-dashboard
+      become: yes         
+
+    - name: Retrieve the admin-user token
+      shell: |
+        sleep 30
+        kubectl get secret admin-user -n kubernetes-dashboard -o jsonpath="{.data.token}" | base64 -d
+      become: yes
+      register: token
+
+    - name: print the token
+      debug:
+        msg: "{{ token.stdout }}"
+

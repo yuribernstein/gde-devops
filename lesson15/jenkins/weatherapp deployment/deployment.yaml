@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weatherapp-deployment
+  labels:
+    app: weatherapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: weatherapp
+  template:
+    metadata:
+      labels:
+        app: weatherapp
+    spec:
+      containers:
+      - name: weatherapp-container
+        image: yuribernstein/advisor:2.0.2
+        ports:
+        - containerPort: 8080
+        env:
+        - name: 'CONFIG_VERSION'
+          value: '0.0.0'
+        - name: 'AWS_ACCESS_KEY'
+          value: ''
+        - name: 'AWS_SECRET_KEY'
+          value: ''    
+        - name: 'ENVIRONMENT'
+          value: 'production'    
+
+
+                
